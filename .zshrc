@@ -1,10 +1,9 @@
-eval "$(goenv init -)"
 eval "$(rbenv init - zsh)"
 eval "$(nodenv init -)"
 
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="/usr/local/opt/rustup/bin:$PATH"
 
-ZSH_THEME="geoffgarside"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -38,7 +37,7 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-export PATH="$HOME/.cargo/env:$PATH"
+# rust
+export PATH="/usr/local/opt/rustup/bin:$PATH"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+eval "$(starship init zsh)"
