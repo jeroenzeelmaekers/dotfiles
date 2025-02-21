@@ -1,19 +1,17 @@
 div > .vimiumHintMarker {
-	/* linkhint boxes */
-	background: #f5bde6 !important;
-	border: none;
-	color: #242739 !important;
-	box-shadow: none !important;
-	font-family: Helvetica, Arial, sans-serif;
-	font-weight: bold;
+  /* linkhint boxes */
+  background: #9b9e85;
+  border: none;
+  padding: 2px 3px;
 }
 
 div > .vimiumHintMarker span {
-	color: #242739 !important;
-	font-family: Helvetica, Arial, sans-serif;
-	font-weight: bold;
+  /* linkhint text */
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 11px;
 }
 
 div > .vimiumHintMarker > .matchingCharacter {
-	color: #f5bde6 !important;
+  color: #ffff !important;
 }
