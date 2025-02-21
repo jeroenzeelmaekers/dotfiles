@@ -36,7 +36,6 @@ return {
 				-- web dev
 				"prettier",
 				"eslint_d",
-				"biome",
 			},
 		})
 	end,
