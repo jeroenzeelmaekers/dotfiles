@@ -25,6 +25,8 @@ return {
 				-- css
 				"cssls",
 				"tailwindcss",
+				-- c#
+				"csharp_ls",
 			},
 			automatic_installation = true,
 		})
@@ -36,6 +38,8 @@ return {
 				-- web dev
 				"prettier",
 				"eslint_d",
+				-- c#
+				"csharpier",
 			},
 		})
 	end,

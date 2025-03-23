@@ -31,6 +31,8 @@ return {
 					"dockerfile",
 					"gitcommit",
 					"gitignore",
+					"c_sharp",
+					"terraform",
 				},
 				incremental_selection = {
 					enable = true,

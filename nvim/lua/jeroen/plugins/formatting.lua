@@ -15,6 +15,7 @@ return {
 				html = { "prettier" },
 				json = { "prettier" },
 				lua = { "stylua" },
+				cs = { "csharpier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
