@@ -37,7 +37,13 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# dotnet
+export PATH="$HOME/.dotnet/tools:$PATH"
+
 # rust
 export PATH="/usr/local/opt/rustup/bin:$PATH"
 
 eval "$(starship init zsh)"
+
+# Reset cursor when exiting Lazygit
+echo -ne "\e[0 q"
