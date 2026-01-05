@@ -1,0 +1,10 @@
+add_newline = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+
+[directory.substitutions]
+"~/github" = "github.com"
+"~/azure" = "azure.com"
+"~/bitbucket" = "bitbucket.org"

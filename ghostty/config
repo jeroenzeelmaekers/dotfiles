@@ -1,0 +1,8 @@
+theme = dark:Melange Dark, light:Melange Light
+font-family = Berkeley Mono Medium 
+font-thicken = false
+font-size = 14
+
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
