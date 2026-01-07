@@ -1,14 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
   lazy = false,
   build = ":TSUpdate",
   config = function()
-    local treesitter = require("nvim-treesitter.configs")
-    treesitter.setup({
-      highlight = { enable = true },
-      indent = { enable = true },
-      ensure_installed = {
+    require("nvim-treesitter").setup({
+      ensured_installed = {
         "lua",
         "json",
         "javascript",
@@ -20,5 +16,7 @@ return {
       sync_install = false,
       auto_install = true,
     })
+
+    vim.treesitter.language.register("typescript", "javascript")
   end,
 }
