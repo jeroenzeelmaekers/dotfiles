@@ -4,6 +4,7 @@ return {
     opts = {
       ensure_installed = {
         "ts_ls",
+        "angularls",
         "html",
         "cssls",
         "tailwindcss",

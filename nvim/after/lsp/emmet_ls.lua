@@ -1,3 +1,3 @@
 return {
-  filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
+  filetypes = { "html", "typescriptreact", "javascriptreact", "css", "htmlangular" },
 }

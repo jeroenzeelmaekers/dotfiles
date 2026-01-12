@@ -3,7 +3,7 @@ return {
   lazy = false,
   build = ":TSUpdate",
   config = function()
-    require("nvim-treesitter").setup({
+    require("nvim-treesitter.configs").setup({
       ensure_installed = {
         "lua",
         "json",
@@ -12,11 +12,19 @@ return {
         "html",
         "css",
         "tsx",
+        "angular",
       },
       sync_install = false,
       auto_install = true,
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
+      },
     })
 
     vim.treesitter.language.register("typescript", "javascript")
+    vim.treesitter.language.register("angular", "htmlangular")
   end,
 }
