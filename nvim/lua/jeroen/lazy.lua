@@ -17,6 +17,9 @@ require("lazy").setup({
   { import = "jeroen.plugins" },
   { import = "jeroen.plugins.lsp" },
 }, {
+    install = {
+      colorscheme = { "melange"}
+    },
   checker = {
     enabled = true,
     notify = false,

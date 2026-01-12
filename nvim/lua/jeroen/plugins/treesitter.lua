@@ -13,6 +13,8 @@ return {
         "css",
         "tsx",
         "angular",
+        "gitcommit",
+        "diff",
       },
       sync_install = false,
       auto_install = true,
