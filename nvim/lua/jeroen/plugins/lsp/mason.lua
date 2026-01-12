@@ -11,6 +11,7 @@ return {
         "lua_ls",
         "emmet_ls",
         "eslint",
+        "omnisharp",
       },
     },
     dependencies = {
@@ -37,6 +38,7 @@ return {
         "biome",
         "stylua",
         "eslint_d",
+        "csharpier",
       },
     },
     dependencies = {

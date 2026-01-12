@@ -15,6 +15,7 @@ return {
         "angular",
         "gitcommit",
         "diff",
+        "c_sharp",
       },
       sync_install = false,
       auto_install = true,

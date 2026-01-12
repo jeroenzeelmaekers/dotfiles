@@ -15,23 +15,28 @@ return {
         css = { "prettier", "biome", stop_after_first = true },
         html = { "prettier", "biome", stop_after_first = true },
         lua = { "stylua" },
+        cs = { "csharpier" },
       },
       formatters = {
-				biome = {
-					condition = function(_, ctx)
-						return vim.fs.find({ "biome.json", "biome.jsonc" }, {
-							path = ctx.filename,
-							upward = true,
-							stop = vim.uv.os_homedir(),
-						})[1] ~= nil
-					end,
+        biome = {
+          condition = function(_, ctx)
+            return vim.fs.find({ "biome.json", "biome.jsonc" }, {
+              path = ctx.filename,
+              upward = true,
+              stop = vim.uv.os_homedir(),
+            })[1] ~= nil
+          end,
+        },
+        csharpier = {
+          prepend_args = { "--print-width", "120" },
+        },
       },
       format_on_save = {
         lsp_fallback = true,
         async = false,
         timeout_ms = 1000,
       },
-    }})
+    })
 
     vim.keymap.set({ "n", "v" }, "<leader>mp", function()
       conform.format({
