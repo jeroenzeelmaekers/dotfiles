@@ -5,12 +5,13 @@ return {
   config = function()
     local lint = require("lint")
 
-    lint.linters_by_ft = {
-      javascript = { "eslint_d" },
-      typescript = { "eslint_d" },
-      javascriptreact = { "eslint_d" },
-      typescriptreact = { "eslint_d" },
-    }
+    -- ESLint is handled by eslint LSP, so we only add non-JS linters here
+    -- Add other linters as needed, e.g.:
+    -- lint.linters_by_ft = {
+    --   python = { "pylint" },
+    --   go = { "golangcilint" },
+    -- }
+    lint.linters_by_ft = {}
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 

@@ -4,7 +4,7 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter").setup({
-      ensured_installed = {
+      ensure_installed = {
         "lua",
         "json",
         "javascript",
