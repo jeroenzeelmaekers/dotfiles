@@ -11,7 +11,12 @@ return {
     --   python = { "pylint" },
     --   go = { "golangcilint" },
     -- }
-    lint.linters_by_ft = {}
+    lint.linters_by_ft = {
+      javascript = { "oxlint" },
+      typescript = { "oxlint" },
+      javascriptreact = { "oxlint" },
+      typescriptreact = { "oxlint" },
+    }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 

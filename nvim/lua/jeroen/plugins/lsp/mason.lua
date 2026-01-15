@@ -39,6 +39,7 @@ return {
         "stylua",
         "eslint_d",
         "csharpier",
+        "oxlint",
       },
     },
     dependencies = {
