@@ -1,0 +1,27 @@
+{
+  "name": "custom-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": ["typescript", "typescriptreact"],
+        "path": "./angular.json"
+      },
+      {
+        "language": ["typescript", "typescriptreact"],
+        "path": "./typescript.json"
+      },
+      {
+        "language": ["javascript", "javascriptreact"],
+        "path": "./javascript.json"
+      },
+      {
+        "language": ["html", "angular", "typescriptreact", "javascriptreact"],
+        "path": "./html.json"
+      },
+      {
+        "language": ["css", "scss", "sass", "less"],
+        "path": "./css.json"
+      }
+    ]
+  }
+}

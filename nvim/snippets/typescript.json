@@ -1,0 +1,383 @@
+{
+  "Interface": {
+    "prefix": "intf",
+    "body": [
+      "interface ${1:Name} {",
+      "  ${2:property}: ${3:type};$0",
+      "}"
+    ],
+    "description": "TypeScript interface"
+  },
+  "Type Alias": {
+    "prefix": "type",
+    "body": ["type ${1:Name} = ${2:type};$0"],
+    "description": "TypeScript type alias"
+  },
+  "Enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:Name} {",
+      "  ${2:Member} = '${3:value}',$0",
+      "}"
+    ],
+    "description": "TypeScript enum"
+  },
+  "Const Enum": {
+    "prefix": "const-enum",
+    "body": [
+      "const enum ${1:Name} {",
+      "  ${2:Member} = '${3:value}',$0",
+      "}"
+    ],
+    "description": "TypeScript const enum"
+  },
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:Name} {",
+      "  constructor(${2:params}) {",
+      "    $0",
+      "  }",
+      "}"
+    ],
+    "description": "TypeScript class"
+  },
+  "Class with Interface": {
+    "prefix": "class-impl",
+    "body": [
+      "class ${1:Name} implements ${2:Interface} {",
+      "  constructor(${3:params}) {",
+      "    $0",
+      "  }",
+      "}"
+    ],
+    "description": "TypeScript class implementing interface"
+  },
+  "Async Function": {
+    "prefix": "afn",
+    "body": [
+      "async function ${1:name}(${2:params}): Promise<${3:void}> {",
+      "  $0",
+      "}"
+    ],
+    "description": "Async function"
+  },
+  "Async Arrow Function": {
+    "prefix": "aafn",
+    "body": ["const ${1:name} = async (${2:params}): Promise<${3:void}> => {", "  $0", "};"],
+    "description": "Async arrow function"
+  },
+  "Arrow Function": {
+    "prefix": "fn",
+    "body": ["const ${1:name} = (${2:params}): ${3:void} => {", "  $0", "};"],
+    "description": "Arrow function"
+  },
+  "Arrow Function Inline": {
+    "prefix": "fni",
+    "body": ["const ${1:name} = (${2:params}) => $0;"],
+    "description": "Inline arrow function"
+  },
+  "Export Function": {
+    "prefix": "efn",
+    "body": [
+      "export function ${1:name}(${2:params}): ${3:void} {",
+      "  $0",
+      "}"
+    ],
+    "description": "Export function"
+  },
+  "Export Async Function": {
+    "prefix": "eafn",
+    "body": [
+      "export async function ${1:name}(${2:params}): Promise<${3:void}> {",
+      "  $0",
+      "}"
+    ],
+    "description": "Export async function"
+  },
+  "Export Const": {
+    "prefix": "ec",
+    "body": ["export const ${1:name} = $0;"],
+    "description": "Export const"
+  },
+  "Export Default": {
+    "prefix": "ed",
+    "body": ["export default $0;"],
+    "description": "Export default"
+  },
+  "Import": {
+    "prefix": "imp",
+    "body": ["import { $2 } from '${1:module}';$0"],
+    "description": "Import statement"
+  },
+  "Import Default": {
+    "prefix": "impd",
+    "body": ["import ${2:name} from '${1:module}';$0"],
+    "description": "Import default"
+  },
+  "Import Type": {
+    "prefix": "impt",
+    "body": ["import type { $2 } from '${1:module}';$0"],
+    "description": "Import type"
+  },
+  "Try Catch": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (error) {",
+      "  console.error(error);",
+      "}"
+    ],
+    "description": "Try catch block"
+  },
+  "Try Catch Finally": {
+    "prefix": "tryf",
+    "body": [
+      "try {",
+      "  $0",
+      "} catch (error) {",
+      "  console.error(error);",
+      "} finally {",
+      "  ",
+      "}"
+    ],
+    "description": "Try catch finally block"
+  },
+  "Promise": {
+    "prefix": "prom",
+    "body": [
+      "new Promise<${1:void}>((resolve, reject) => {",
+      "  $0",
+      "});"
+    ],
+    "description": "Promise constructor"
+  },
+  "Promise All": {
+    "prefix": "pall",
+    "body": ["const [${1:result1}, ${2:result2}] = await Promise.all([", "  ${3:promise1},", "  ${4:promise2},$0", "]);"],
+    "description": "Promise.all"
+  },
+  "Set Timeout": {
+    "prefix": "sto",
+    "body": [
+      "setTimeout(() => {",
+      "  $0",
+      "}, ${1:1000});"
+    ],
+    "description": "setTimeout"
+  },
+  "Set Interval": {
+    "prefix": "sti",
+    "body": [
+      "setInterval(() => {",
+      "  $0",
+      "}, ${1:1000});"
+    ],
+    "description": "setInterval"
+  },
+  "For Of": {
+    "prefix": "forof",
+    "body": [
+      "for (const ${1:item} of ${2:iterable}) {",
+      "  $0",
+      "}"
+    ],
+    "description": "For of loop"
+  },
+  "For In": {
+    "prefix": "forin",
+    "body": [
+      "for (const ${1:key} in ${2:object}) {",
+      "  $0",
+      "}"
+    ],
+    "description": "For in loop"
+  },
+  "For Each": {
+    "prefix": "foreach",
+    "body": [
+      "${1:array}.forEach((${2:item}) => {",
+      "  $0",
+      "});"
+    ],
+    "description": "forEach loop"
+  },
+  "Map": {
+    "prefix": "map",
+    "body": ["${1:array}.map((${2:item}) => $0);"],
+    "description": "Array map"
+  },
+  "Filter": {
+    "prefix": "filter",
+    "body": ["${1:array}.filter((${2:item}) => $0);"],
+    "description": "Array filter"
+  },
+  "Reduce": {
+    "prefix": "reduce",
+    "body": ["${1:array}.reduce((${2:acc}, ${3:item}) => {", "  $0", "  return ${2:acc};", "}, ${4:initialValue});"],
+    "description": "Array reduce"
+  },
+  "Find": {
+    "prefix": "find",
+    "body": ["${1:array}.find((${2:item}) => $0);"],
+    "description": "Array find"
+  },
+  "Some": {
+    "prefix": "some",
+    "body": ["${1:array}.some((${2:item}) => $0);"],
+    "description": "Array some"
+  },
+  "Every": {
+    "prefix": "every",
+    "body": ["${1:array}.every((${2:item}) => $0);"],
+    "description": "Array every"
+  },
+  "Destructure Object": {
+    "prefix": "dob",
+    "body": ["const { ${2:property} } = ${1:object};$0"],
+    "description": "Destructure object"
+  },
+  "Destructure Array": {
+    "prefix": "dar",
+    "body": ["const [${2:first}, ${3:second}] = ${1:array};$0"],
+    "description": "Destructure array"
+  },
+  "Spread Object": {
+    "prefix": "spread",
+    "body": ["{ ...${1:object}, ${2:key}: ${3:value} }$0"],
+    "description": "Spread object"
+  },
+  "Ternary": {
+    "prefix": "ter",
+    "body": ["${1:condition} ? ${2:true} : ${3:false}$0"],
+    "description": "Ternary operator"
+  },
+  "Nullish Coalescing": {
+    "prefix": "nc",
+    "body": ["${1:value} ?? ${2:default}$0"],
+    "description": "Nullish coalescing"
+  },
+  "Optional Chaining": {
+    "prefix": "oc",
+    "body": ["${1:object}?.${2:property}$0"],
+    "description": "Optional chaining"
+  },
+  "Console Log": {
+    "prefix": "cl",
+    "body": ["console.log($0);"],
+    "description": "Console log"
+  },
+  "Console Log Variable": {
+    "prefix": "clv",
+    "body": ["console.log('${1:variable}:', ${1:variable});$0"],
+    "description": "Console log with variable name"
+  },
+  "Console Error": {
+    "prefix": "ce",
+    "body": ["console.error($0);"],
+    "description": "Console error"
+  },
+  "Console Warn": {
+    "prefix": "cw",
+    "body": ["console.warn($0);"],
+    "description": "Console warn"
+  },
+  "Console Table": {
+    "prefix": "ct",
+    "body": ["console.table($0);"],
+    "description": "Console table"
+  },
+  "Fetch": {
+    "prefix": "fetch",
+    "body": [
+      "const response = await fetch('${1:url}', {",
+      "  method: '${2|GET,POST,PUT,PATCH,DELETE|}',",
+      "  headers: {",
+      "    'Content-Type': 'application/json',",
+      "  },",
+      "  ${3:body: JSON.stringify(data),}",
+      "});",
+      "",
+      "const ${4:data} = await response.json();$0"
+    ],
+    "description": "Fetch request"
+  },
+  "Fetch Get": {
+    "prefix": "fetchg",
+    "body": [
+      "const response = await fetch('${1:url}');",
+      "const ${2:data} = await response.json();$0"
+    ],
+    "description": "Fetch GET request"
+  },
+  "Generic Type": {
+    "prefix": "gent",
+    "body": ["<${1:T}>$0"],
+    "description": "Generic type parameter"
+  },
+  "Generic Function": {
+    "prefix": "genfn",
+    "body": [
+      "function ${1:name}<${2:T}>(${3:param}: ${2:T}): ${2:T} {",
+      "  $0",
+      "  return ${3:param};",
+      "}"
+    ],
+    "description": "Generic function"
+  },
+  "Type Guard": {
+    "prefix": "typeguard",
+    "body": [
+      "function is${1:Type}(value: unknown): value is ${1:Type} {",
+      "  return $0;",
+      "}"
+    ],
+    "description": "Type guard function"
+  },
+  "Readonly": {
+    "prefix": "ro",
+    "body": ["Readonly<${1:Type}>$0"],
+    "description": "Readonly type"
+  },
+  "Partial": {
+    "prefix": "partial",
+    "body": ["Partial<${1:Type}>$0"],
+    "description": "Partial type"
+  },
+  "Pick": {
+    "prefix": "pick",
+    "body": ["Pick<${1:Type}, '${2:key}'>$0"],
+    "description": "Pick type"
+  },
+  "Omit": {
+    "prefix": "omit",
+    "body": ["Omit<${1:Type}, '${2:key}'>$0"],
+    "description": "Omit type"
+  },
+  "Record": {
+    "prefix": "record",
+    "body": ["Record<${1:string}, ${2:any}>$0"],
+    "description": "Record type"
+  },
+  "Typeof": {
+    "prefix": "tof",
+    "body": ["typeof ${1:value}$0"],
+    "description": "typeof operator"
+  },
+  "Keyof": {
+    "prefix": "kof",
+    "body": ["keyof ${1:Type}$0"],
+    "description": "keyof operator"
+  },
+  "As Const": {
+    "prefix": "asc",
+    "body": ["as const$0"],
+    "description": "as const assertion"
+  },
+  "Non Null Assertion": {
+    "prefix": "nna",
+    "body": ["${1:value}!$0"],
+    "description": "Non-null assertion"
+  }
+}
