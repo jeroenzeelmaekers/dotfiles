@@ -15,3 +15,4 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 export BUN_INSTALL="$HOME/.bun"
 
+. "$HOME/.cargo/env"

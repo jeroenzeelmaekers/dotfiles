@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "system",
+  "model": "anthropic/claude-opus-4-5",
+  "autoupdate": true,
+  "instructions": [
+    "https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/react-best-practices/AGENTS.md"
+  ],
+  "mcp": {
+    "effect-docs": {
+      "type": "local",
+      "command": ["npx", "-y", "effect-mcp@latest"]
+    }
+  }
+}
