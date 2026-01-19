@@ -6,8 +6,6 @@ return {
     "rafamadriz/friendly-snippets",
     { "folke/lazydev.nvim", opts = {} },
   },
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
   opts = {
     keymap = {
       preset = "default",
