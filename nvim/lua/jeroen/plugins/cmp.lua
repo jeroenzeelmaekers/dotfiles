@@ -54,7 +54,6 @@ return {
 
     snippets = {
       preset = "default",
-      search_paths = { vim.fn.stdpath("config") .. "/snippets" },
     },
   },
 }
