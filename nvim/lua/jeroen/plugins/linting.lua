@@ -24,7 +24,12 @@ return {
       end
 
       for _, linter in ipairs(linters) do
-        local linter_cmd = lint.linters[linter] and lint.linters[linter].cmd
+        local linter_config = lint.linters[linter]
+        local linter_cmd = linter_config and linter_config.cmd
+        -- cmd can be a string or a function, resolve it
+        if type(linter_cmd) == "function" then
+          linter_cmd = linter_cmd()
+        end
         if linter_cmd and vim.fn.executable(linter_cmd) == 1 then
           lint.try_lint({ linter })
           return
