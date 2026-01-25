@@ -17,6 +17,9 @@
   "neotest-jest": { "branch": "main", "commit": "3f0cc2cff1ee05394081805c622dc2551b54d8c4" },
   "neotest-vitest": { "branch": "main", "commit": "f01addc6f07b79ef1be5f4297eafbee9e0959018" },
   "nvim-autopairs": { "branch": "master", "commit": "c2a0dd0d931d0fb07665e1fedb1ea688da3b80b4" },
+  "nvim-dap": { "branch": "master", "commit": "085386b9359ddf8d76ad89b98973b8e332dc5ba3" },
+  "nvim-dap-ui": { "branch": "master", "commit": "cf91d5e2d07c72903d052f5207511bf7ecdb7122" },
+  "nvim-dap-virtual-text": { "branch": "master", "commit": "fbdb48c2ed45f4a8293d0d483f7730d24467ccb6" },
   "nvim-lint": { "branch": "master", "commit": "ca6ea12daf0a4d92dc24c5c9ae22a1f0418ade37" },
   "nvim-lsp-file-operations": { "branch": "master", "commit": "b9c795d3973e8eec22706af14959bc60c579e771" },
   "nvim-lspconfig": { "branch": "master", "commit": "419b082102fa813739588dd82e19a8b6b2442855" },
@@ -31,5 +34,5 @@
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
   "vimtex": { "branch": "master", "commit": "f707368022cdb851716be0d2970b90599c84a6a6" },
-  "yazi.nvim": { "branch": "main", "commit": "f75450ef18689482f2026916d836dd30f7b22d89" }
+  "yazi.nvim": { "branch": "main", "commit": "e63edf5c90aaed0b6b13320958c5302f97a6cc95" }
 }
