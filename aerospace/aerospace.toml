@@ -1,10 +1,10 @@
 [gaps]
-    inner.horizontal = 21
-    inner.vertical =   21
-    outer.left =       21
-    outer.bottom =     21
-    outer.top =        21
-    outer.right =      21
+    inner.horizontal = 20
+    inner.vertical =   20
+    outer.left =       20
+    outer.bottom =     20
+    outer.top =        14
+    outer.right =      20
 
 [mode.main.binding]
    alt-h = 'focus left'
@@ -36,3 +36,7 @@
   alt-shift-7 = 'move-node-to-workspace 7'
   alt-shift-8 = 'move-node-to-workspace 8'
   alt-shift-9 = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+  if.app-name-regex-substring = 'simulator'
+  run = 'layout tiling'
