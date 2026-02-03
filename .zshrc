@@ -59,7 +59,6 @@ alias lg='lazygit'
 # Shell integrations
 eval "$(rbenv init - zsh)"
 eval "$(nodenv init -)"
-eval "$(jenv init -)"
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
