@@ -16,6 +16,7 @@ return {
         html = { "oxfmt", "prettier", "biome", stop_after_first = true },
         lua = { "stylua" },
         cs = { "csharpier" },
+        rust = { "rustfmt" },
       },
       formatters = {
         oxfmt = {
