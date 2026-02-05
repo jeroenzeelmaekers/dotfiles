@@ -43,3 +43,7 @@
 [[on-window-detected]]
   if.app-name-regex-substring = 'simulator'
   run = 'layout tiling'
+
+[[on-window-detected]]
+  if.app-name-regex-substring = 'finder'
+  run = 'layout floating'
