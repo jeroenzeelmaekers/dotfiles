@@ -1,73 +1,73 @@
-/* Vimium CSS - Melange Dark theme (matching Ghostty terminal) */
+/* Vimium CSS - Melange Light theme (inverted from Ghostty terminal) */
 
 /* Link hint markers */
 div.internal-vimium-hint-marker {
-  background: #292522 !important;
+  background: #ECE1D7 !important;
   border: 1px solid #867462 !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 div.internal-vimium-hint-marker span {
-  color: #EBC06D !important;
+  color: #292522 !important;
   font-family: "Berkeley Mono", monospace !important;
   font-weight: 600 !important;
   text-shadow: none !important;
 }
 
 div.internal-vimium-hint-marker > .matchingCharacter {
-  color: #85B695 !important;
+  color: #78997A !important;
 }
 
 div > .vimiumActiveHintMarker span {
-  color: #D47766 !important;
+  color: #BD8183 !important;
 }
 
 /* Vomnibar */
 #vomnibar {
-  background: #292522 !important;
+  background: #ECE1D7 !important;
   border: 1px solid #867462 !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 #vomnibar-search-area {
-  background: #292522 !important;
-  border-bottom: 1px solid #34302C !important;
+  background: #ECE1D7 !important;
+  border-bottom: 1px solid #C1A78E !important;
 }
 
 #vomnibar input {
-  background: #34302C !important;
-  color: #ECE1D7 !important;
+  background: #C1A78E !important;
+  color: #292522 !important;
   font-family: "Berkeley Mono", monospace !important;
   border: none !important;
   box-shadow: none !important;
 }
 
 #vomnibar input::selection {
-  background: #403A36 !important;
+  background: #867462 !important;
   color: #ECE1D7 !important;
 }
 
 #vomnibar ul {
-  background: #292522 !important;
+  background: #ECE1D7 !important;
 }
 
 #vomnibar li {
-  background: #292522 !important;
-  border-bottom: 1px solid #34302C !important;
-  color: #ECE1D7 !important;
+  background: #ECE1D7 !important;
+  border-bottom: 1px solid #C1A78E !important;
+  color: #292522 !important;
 }
 
 #vomnibar li.selected {
-  background: #403A36 !important;
+  background: #C1A78E !important;
 }
 
 #vomnibar li .title,
 #vomnibar li em {
-  color: #ECE1D7 !important;
+  color: #292522 !important;
 }
 
 #vomnibar li .url {
-  color: #A3A9CE !important;
+  color: #7F91B2 !important;
 }
 
 #vomnibar li .source {
@@ -75,11 +75,11 @@ div > .vimiumActiveHintMarker span {
 }
 
 #vomnibar li .match {
-  color: #EBC06D !important;
+  color: #E49B5D !important;
   font-weight: 600 !important;
 }
 
 #vomnibar li em .match,
 #vomnibar li .title .match {
-  color: #EBC06D !important;
+  color: #E49B5D !important;
 }

@@ -1,0 +1,48 @@
+/* Vimari CSS - Melange Light theme (matching Ghostty terminal, inverted) */
+/* Safari user stylesheet to override Vimari defaults */
+
+/* Link hint markers */
+div.internalVimiumHintMarker.vimiumReset {
+  background: #ECE1D7 !important;
+  border: 1px solid #867462 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.1s;
+}
+
+div.internalVimiumHintMarker.vimiumReset span {
+  color: #292522 !important;
+  font-family: "Berkeley Mono", monospace !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+div.internalVimiumHintMarker.vimiumReset > .matchingCharacter {
+  color: #78997A !important;
+}
+
+/* HUD */
+.vimiumHUD.vimiumReset {
+  background: #ECE1D7 !important;
+  border: 1px solid #867462 !important;
+  border-bottom: none !important;
+  color: #292522 !important;
+  text-shadow: none !important;
+}
+
+.vimiumHUD.vimiumReset * {
+  font-family: "Berkeley Mono", monospace !important;
+  color: #292522 !important;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
