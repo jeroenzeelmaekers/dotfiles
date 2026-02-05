@@ -18,6 +18,7 @@
    alt-shift-l = 'move right'
 
    alt-shift-f = 'layout floating tiling'
+   alt-f = 'fullscreen'
 
   alt-1 = 'workspace 1'
   alt-2 = 'workspace 2'
