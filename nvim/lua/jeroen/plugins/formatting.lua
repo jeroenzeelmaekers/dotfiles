@@ -14,6 +14,7 @@ return {
         json = { "oxfmt", "prettier", "biome", stop_after_first = true },
         css = { "oxfmt", "prettier", "biome", stop_after_first = true },
         html = { "oxfmt", "prettier", "biome", stop_after_first = true },
+        yaml = { "prettier" },
         lua = { "stylua" },
         cs = { "csharpier" },
         rust = { "rustfmt" },
