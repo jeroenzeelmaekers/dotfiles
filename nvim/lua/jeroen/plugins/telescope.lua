@@ -5,6 +5,7 @@ return {
   keys = {
     { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
     { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+    { "<leader>ds", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document symbols" },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
