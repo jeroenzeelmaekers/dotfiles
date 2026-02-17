@@ -3,9 +3,6 @@
   "theme": "system",
   "model": "github-copilot/claude-opus-4.6",
   "autoupdate": true,
-  "instructions": [
-    "https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/react-best-practices/AGENTS.md"
-  ],
   "mcp": {
     "effect-docs": {
       "type": "local",
@@ -18,3 +15,4 @@
     }
   }
 }
+
