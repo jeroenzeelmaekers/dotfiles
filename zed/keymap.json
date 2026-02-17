@@ -1,8 +1,0 @@
-[
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "cmd-alt-.": "project_panel::ToggleHideGitIgnore"
-    }
-  }
-]
