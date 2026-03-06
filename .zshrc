@@ -62,3 +62,7 @@ eval "$(nodenv init -)"
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
