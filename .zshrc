@@ -4,6 +4,9 @@ eval "$(starship init zsh)"
 # Homebrew setup
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Restore macOS system paths
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 # Zinit installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -59,6 +62,11 @@ alias lg='lazygit'
 # Shell integrations
 eval "$(rbenv init - zsh)"
 eval "$(nodenv init -)"
+eval "$(jenv init -)"
+
+# Java
+export JAVA_HOME="$(jenv javahome)"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
