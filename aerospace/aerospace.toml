@@ -1,10 +1,24 @@
+start-at-login = true
+
+after-startup-command = [
+    'workspace misc_2',
+    'layout v_tiles',
+    'workspace misc_3',
+    'layout v_tiles',
+    'workspace web',
+]
+
+[workspace-to-monitor-force-assignment]
+    misc_2 = 2
+    misc_3 = 2
+
 [gaps]
-    inner.horizontal = 20
-    inner.vertical =   20
-    outer.left =       20
-    outer.bottom =     20
-    outer.top =        14
-    outer.right =      20
+    inner.horizontal = 10
+    inner.vertical =   10
+    outer.left =       10
+    outer.bottom =     10
+    outer.top =        4
+    outer.right =      10
 
 [mode.main.binding]
    alt-h = 'focus left'
@@ -49,11 +63,7 @@
   run = 'layout floating'
 
 [[on-window-detected]]
-  if.app-name-regex-substring = 'safari'
-  run = ['move-node-to-workspace web', 'focus-back-and-forth']
-
-[[on-window-detected]]
-  if.app-name-regex-substring = 'chrome'
+  if.app-name-regex-substring = 'chrome|safari|helium'
   run = ['move-node-to-workspace web', 'focus-back-and-forth']
 
 [[on-window-detected]]
