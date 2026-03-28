@@ -15,6 +15,7 @@ return {
         css = { "oxfmt", "prettier", "biome", stop_after_first = true },
         html = { "oxfmt", "prettier", "biome", stop_after_first = true },
         yaml = { "prettier" },
+        java = { "google-java-format" },
         lua = { "stylua" },
         cs = { "csharpier" },
         rust = { "rustfmt" },
@@ -45,7 +46,7 @@ return {
       format_on_save = {
         lsp_fallback = true,
         async = false,
-        timeout_ms = 1000,
+        timeout_ms = 3000,
       },
     })
 
@@ -53,7 +54,7 @@ return {
       conform.format({
         lsp_fallback = true,
         async = false,
-        timeout_ms = 1000,
+        timeout_ms = 3000,
       })
     end, { desc = "Format file or selection" })
   end,

@@ -9,6 +9,7 @@ return {
         "json",
         "javascript",
         "typescript",
+        "java",
         "html",
         "css",
         "tsx",
