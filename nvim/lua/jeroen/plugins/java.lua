@@ -118,16 +118,13 @@ return {
             return
           end
 
-          local opts = { buffer = buffer, silent = true }
+          local function map(lhs, rhs, desc)
+            keymap.set("n", lhs, rhs, { buffer = buffer, silent = true, desc = desc })
+          end
 
-          opts.desc = "Debug Java class"
-          keymap.set("n", "<leader>tc", jdtls.test_class, opts)
-
-          opts.desc = "Debug Java method"
-          keymap.set("n", "<leader>tm", jdtls.test_nearest_method, opts)
-
-          opts.desc = "Organize Java imports"
-          keymap.set("n", "<leader>jo", jdtls.organize_imports, opts)
+          map("<leader>tc", jdtls.test_class, "Debug Java class")
+          map("<leader>tm", jdtls.test_nearest_method, "Debug Java method")
+          map("<leader>jo", jdtls.organize_imports, "Organize Java imports")
 
           vim.defer_fn(function()
             pcall(require("jdtls.dap").setup_dap_main_class_configs)

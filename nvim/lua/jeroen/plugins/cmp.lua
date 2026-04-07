@@ -43,6 +43,11 @@ return {
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "lazydev" },
       providers = {
+        snippets = {
+          opts = {
+            search_paths = { vim.fn.stdpath("config") .. "/snippets" },
+          },
+        },
         lazydev = {
           name = "LazyDev",
           module = "lazydev.integrations.blink",

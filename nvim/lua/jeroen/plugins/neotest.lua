@@ -2,15 +2,14 @@ return {
   "nvim-neotest/neotest",
   dependencies = {
     "nvim-neotest/nvim-nio",
-    "antoinemadec/FixCursorHold.nvim",
     "marilari88/neotest-vitest",
     "nvim-neotest/neotest-jest",
   },
   keys = {
-    { "<leader>tr", "<cmd>Neotest run<cr>" },
-    { "<leader>ti", "<cmd>Neotest output<cr>" },
-    { "<leader>ts", "<cmd>Neotest summary<cr>" },
-    { "<leader>ta", "<cmd>lua require('neotest').run.run({suite = true})<cr>" },
+    { "<leader>tr", function() require("neotest").run.run() end, desc = "Run nearest test" },
+    { "<leader>ti", function() require("neotest").output.open() end, desc = "Test output" },
+    { "<leader>ts", function() require("neotest").summary.toggle() end, desc = "Test summary" },
+    { "<leader>ta", function() require("neotest").run.run({ suite = true }) end, desc = "Run all tests" },
   },
   config = function()
     local function set_neotest_highlights()
@@ -42,12 +41,10 @@ return {
       vim.api.nvim_set_hl(0, "NeotestBorder", { fg = melange.a.ui })
     end
 
-    -- Set highlights on load
     set_neotest_highlights()
 
-    -- Re-apply when colorscheme changes (light/dark toggle)
     vim.api.nvim_create_autocmd("ColorScheme", {
-      pattern = "*",
+      group = vim.api.nvim_create_augroup("NeotestHighlights", { clear = true }),
       callback = set_neotest_highlights,
     })
 

@@ -74,3 +74,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# bun completions
+[ -s "/Users/jeroen/.bun/_bun" ] && source "/Users/jeroen/.bun/_bun"

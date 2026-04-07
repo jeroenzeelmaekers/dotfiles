@@ -2,7 +2,7 @@ return {
   "akinsho/bufferline.nvim",
   version = "*",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  event = "VimEnter",
+  event = "VeryLazy",
   keys = {
     { "<S-h>", "<cmd>tabprevious<CR>", desc = "Prev tab" },
     { "<S-l>", "<cmd>tabnext<CR>", desc = "Next tab" },
