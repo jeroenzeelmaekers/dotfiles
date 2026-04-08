@@ -17,18 +17,15 @@ return {
   },
   opts = {
     formatters_by_ft = {
-      javascript = { "oxfmt", "prettier", "biome", stop_after_first = true },
-      typescript = { "oxfmt", "prettier", "biome", stop_after_first = true },
-      javascriptreact = { "oxfmt", "prettier", "biome", stop_after_first = true },
-      typescriptreact = { "oxfmt", "prettier", "biome", stop_after_first = true },
-      json = { "oxfmt", "prettier", "biome", stop_after_first = true },
-      css = { "oxfmt", "prettier", "biome", stop_after_first = true },
-      html = { "oxfmt", "prettier", "biome", stop_after_first = true },
+      javascript = { "oxfmt", "prettier", stop_after_first = true },
+      typescript = { "oxfmt", "prettier", stop_after_first = true },
+      javascriptreact = { "oxfmt", "prettier", stop_after_first = true },
+      typescriptreact = { "oxfmt", "prettier", stop_after_first = true },
+      json = { "oxfmt", "prettier", stop_after_first = true },
+      css = { "oxfmt", "prettier", stop_after_first = true },
+      html = { "oxfmt", "prettier", stop_after_first = true },
       yaml = { "prettier" },
-      java = { "google-java-format" },
       lua = { "stylua" },
-      cs = { "csharpier" },
-      rust = { "rustfmt" },
     },
     formatters = {
       oxfmt = {
@@ -39,18 +36,6 @@ return {
             stop = vim.uv.os_homedir(),
           })[1] ~= nil
         end,
-      },
-      biome = {
-        condition = function(_, ctx)
-          return vim.fs.find({ "biome.json", "biome.jsonc" }, {
-            path = ctx.filename,
-            upward = true,
-            stop = vim.uv.os_homedir(),
-          })[1] ~= nil
-        end,
-      },
-      csharpier = {
-        prepend_args = { "--print-width", "120" },
       },
     },
     format_on_save = {

@@ -4,15 +4,12 @@ return {
     opts = {
       ensure_installed = {
         "vtsls",
-        "angularls",
         "html",
         "cssls",
         "tailwindcss",
         "lua_ls",
         "emmet_ls",
         "eslint",
-        "jdtls",
-        "omnisharp",
       },
     },
     dependencies = {
@@ -36,13 +33,8 @@ return {
     opts = {
       ensure_installed = {
         "prettier",
-        "biome",
         "stylua",
         "eslint_d",
-        "csharpier",
-        "google-java-format",
-        "java-debug-adapter",
-        "java-test",
         "oxlint",
       },
     },
