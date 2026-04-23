@@ -1,11 +1,8 @@
 theme = dark:Melange Dark, light:Melange Light
 font-family = Berkeley Mono
-font-style = semibold
+font-style = Medium
 font-size = 16
-
-adjust-cell-height = 2
 
 window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
-
