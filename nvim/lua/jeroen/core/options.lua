@@ -14,10 +14,10 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 opt.linebreak = true
 
 opt.wrap = false
-opt.colorcolumn = "80"
 
 opt.smartcase = true
 opt.ignorecase = true
@@ -34,6 +34,12 @@ opt.incsearch = true
 opt.scrolloff = 8
 
 opt.fillchars = { eob = " " }
+
+opt.undofile = true
+
+opt.termguicolors = true
+
+opt.updatetime = 250
 
 -- Auto-reload files changed outside of neovim
 opt.autoread = true

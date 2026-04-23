@@ -7,6 +7,10 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.INFO] = "➜",
     },
   },
+  virtual_text = {
+    spacing = 2,
+    source = "if_many",
+  },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -31,7 +35,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "]d", function()
       vim.diagnostic.jump({ count = 1, float = true })
     end, "Next diagnostic")
-    map("n", "K", vim.lsp.buf.hover, "Hover documentation")
+    map("n", "K", function()
+      vim.lsp.buf.hover({ border = "rounded" })
+    end, "Hover documentation")
     map("n", "<leader>rs", ":LspRestart<CR>", "Restart LSP")
   end,
 })

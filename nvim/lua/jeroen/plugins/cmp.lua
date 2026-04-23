@@ -5,6 +5,8 @@ return {
   dependencies = {
     "rafamadriz/friendly-snippets",
     { "folke/lazydev.nvim", opts = {} },
+    { "echasnovski/mini.icons", opts = {} },
+    { "xzbdmw/colorful-menu.nvim", opts = {} },
   },
   opts = {
     keymap = {
@@ -34,24 +36,51 @@ return {
       },
       menu = {
         draw = {
-          columns = { { "kind_icon" }, { "label", "label_description", gap = 1 }, { "source_name" } },
+          treesitter = { "lsp" },
+          columns = { { "kind_icon" }, { "label", gap = 1 }, { "source_name" } },
+          components = {
+            kind_icon = {
+              text = function(ctx)
+                local icon, _, _ = require("mini.icons").get("lsp", ctx.kind)
+                return icon
+              end,
+              highlight = function(ctx)
+                local _, hl, _ = require("mini.icons").get("lsp", ctx.kind)
+                return hl
+              end,
+            },
+            label = {
+              text = function(ctx)
+                return require("colorful-menu").blink_components_text(ctx)
+              end,
+              highlight = function(ctx)
+                return require("colorful-menu").blink_components_highlight(ctx)
+              end,
+            },
+            source_name = {
+              text = function(ctx)
+                local map = { LSP = "LSP", Snippets = "Snip", Buffer = "Buf", Path = "Path", LazyDev = "Dev" }
+                return map[ctx.source_name] or ctx.source_name
+              end,
+              highlight = "BlinkCmpSource",
+            },
+          },
         },
       },
       ghost_text = { enabled = true },
     },
 
+    signature = {
+      enabled = true,
+    },
+
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "lazydev" },
       providers = {
-        snippets = {
-          opts = {
-            search_paths = { vim.fn.stdpath("config") .. "/snippets" },
-          },
-        },
+        snippets = {},
         lazydev = {
           name = "LazyDev",
           module = "lazydev.integrations.blink",
-          score_offset = 100,
         },
       },
     },

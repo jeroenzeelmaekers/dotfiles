@@ -9,7 +9,6 @@ return {
         "tailwindcss",
         "lua_ls",
         "emmet_ls",
-        "eslint",
       },
     },
     dependencies = {
@@ -32,8 +31,8 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
       ensure_installed = {
-        "prettier",
         "stylua",
+        "prettier",
         "eslint_d",
         "oxlint",
       },
