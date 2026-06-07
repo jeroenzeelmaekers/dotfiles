@@ -34,9 +34,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "Code actions")
     map("n", "<leader>rn", vim.lsp.buf.rename, "Rename symbol")
     map("n", "<leader>D", function()
-      Snacks.picker.diagnostics_buffer()
+      Snacks.picker.diagnostics({
+        workspace = true,
+      })
     end, "Buffer diagnostics")
-    map("n", "<leader>d", vim.diagnostic.open_float, "Line diagnostics")
     map("n", "[d", function()
       vim.diagnostic.jump({ count = -1, float = true })
     end, "Prev diagnostic")
