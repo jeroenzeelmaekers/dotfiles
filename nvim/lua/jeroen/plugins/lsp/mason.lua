@@ -2,6 +2,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
+      automatic_enable = true,
       ensure_installed = {
         "vtsls",
         "html",

@@ -22,7 +22,7 @@ opt.wrap = false
 opt.smartcase = true
 opt.ignorecase = true
 
-opt.cursorline = true
+opt.cursorline = false
 
 opt.signcolumn = "yes"
 
@@ -40,6 +40,8 @@ opt.undofile = true
 opt.termguicolors = true
 
 opt.updatetime = 250
+
+opt.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 
 -- Auto-reload files changed outside of neovim
 opt.autoread = true

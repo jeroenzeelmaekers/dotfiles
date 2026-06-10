@@ -17,15 +17,16 @@ return {
   },
   opts = {
     formatters_by_ft = {
-      javascript = { "oxfmt", "prettier", stop_after_first = true },
-      typescript = { "oxfmt", "prettier", stop_after_first = true },
-      javascriptreact = { "oxfmt", "prettier", stop_after_first = true },
-      typescriptreact = { "oxfmt", "prettier", stop_after_first = true },
-      json = { "oxfmt", "prettier", stop_after_first = true },
-      css = { "oxfmt", "prettier", stop_after_first = true },
-      html = { "oxfmt", "prettier", stop_after_first = true },
+      javascript = { "prettier", "oxfmt", stop_after_first = true },
+      typescript = { "prettier", "oxfmt", stop_after_first = true },
+      javascriptreact = { "prettier", "oxfmt", stop_after_first = true },
+      typescriptreact = { "prettier", "oxfmt", stop_after_first = true },
+      json = { "prettier", "oxfmt", stop_after_first = true },
+      css = { "prettier", "oxfmt", stop_after_first = true },
+      html = { "prettier", "oxfmt", stop_after_first = true },
       yaml = { "prettier" },
       lua = { "stylua" },
+      csharp = { "csharpier" },
     },
     formatters = {
       oxfmt = {

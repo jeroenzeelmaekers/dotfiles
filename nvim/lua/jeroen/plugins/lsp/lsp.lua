@@ -11,5 +11,24 @@ return {
     vim.lsp.config("*", {
       capabilities = capabilities,
     })
+
+    vim.lsp.config("vtsls", {
+      root_dir = function(bufnr, on_dir)
+        local root = vim.fs.root(bufnr, {
+          "angular.json",
+          "tsconfig.json",
+          "jsconfig.json",
+          "package-lock.json",
+          "yarn.lock",
+          "pnpm-lock.yaml",
+          "bun.lockb",
+          "bun.lock",
+          "package.json",
+          ".git",
+        })
+        on_dir(root or vim.fn.getcwd())
+      end,
+      single_file_support = false,
+    })
   end,
 }
