@@ -1,5 +1,7 @@
 start-at-login = true
 
+default-root-container-layout = 'tiles'
+
 after-startup-command = [
     'workspace misc_2',
     'layout v_tiles',
@@ -13,12 +15,12 @@ after-startup-command = [
     misc_3 = 2
 
 [gaps]
-    inner.horizontal = 10
-    inner.vertical =   10
-    outer.left =       10
+    inner.horizontal = 12
+    inner.vertical =   12
+    outer.left =       12
     outer.bottom =     10
     outer.top =        4
-    outer.right =      10
+    outer.right =      12
 
 [mode.main.binding]
    alt-h = 'focus left'
@@ -63,7 +65,15 @@ after-startup-command = [
   run = 'layout floating'
 
 [[on-window-detected]]
-  if.app-name-regex-substring = 'chrome|safari|helium'
+  if.app-id = 'com.google.Chrome'
+  run = ['move-node-to-workspace web', 'focus-back-and-forth']
+
+[[on-window-detected]]
+  if.app-id = 'com.apple.Safari'
+  run = ['move-node-to-workspace web', 'focus-back-and-forth']
+
+[[on-window-detected]]
+  if.app-id = 'net.imput.helium'
   run = ['move-node-to-workspace web', 'focus-back-and-forth']
 
 [[on-window-detected]]
