@@ -1,8 +1,20 @@
 theme = dark:Melange Dark, light:Melange Light
-font-family = Berkeley Mono
-font-style = Medium
+
+font-family = MonoLisaCode 
+
+font-style = Medium 
+font-style-italic = Medium Italic
+font-style-bold = Bold
+font-style-bold-italic = Bold Italic
+
 font-size = 16
 
 window-padding-balance = true
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 5
+window-padding-y = 5
+
+macos-titlebar-style = hidden
+
+adjust-cell-height = 5%
+
+mouse-hide-whilwhene-typing = true
