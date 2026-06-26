@@ -2,63 +2,65 @@
 
 /* Link hint markers */
 div.internal-vimium-hint-marker {
-  background: #ECE1D7 !important;
+  background: #ece1d7 !important;
   border: 1px solid #867462 !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 div.internal-vimium-hint-marker span {
   color: #292522 !important;
-  font-family: "Berkeley Mono", monospace !important;
+  font-family: "MonoLisaCode", monospace !important;
+  font-size: 13px !important;
   font-weight: 600 !important;
   text-shadow: none !important;
 }
 
 div.internal-vimium-hint-marker > .matchingCharacter {
-  color: #78997A !important;
+  color: #78997a !important;
 }
 
 div > .vimiumActiveHintMarker span {
-  color: #BD8183 !important;
+  color: #bd8183 !important;
 }
 
 /* Vomnibar */
 #vomnibar {
-  background: #ECE1D7 !important;
+  background: #ece1d7 !important;
   border: 1px solid #867462 !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 #vomnibar-search-area {
-  background: #ECE1D7 !important;
-  border-bottom: 1px solid #C1A78E !important;
+  background: #ece1d7 !important;
+  border-bottom: 1px solid #c1a78e !important;
 }
 
 #vomnibar input {
-  background: #C1A78E !important;
+  background: #c1a78e !important;
   color: #292522 !important;
-  font-family: "Berkeley Mono", monospace !important;
+  font-family: "MonoLisaCode", monospace !important;
+  font-size: 13px !important;
   border: none !important;
   box-shadow: none !important;
 }
 
 #vomnibar input::selection {
   background: #867462 !important;
-  color: #ECE1D7 !important;
+  color: #ece1d7 !important;
 }
 
 #vomnibar ul {
-  background: #ECE1D7 !important;
+  background: #ece1d7 !important;
 }
 
 #vomnibar li {
-  background: #ECE1D7 !important;
-  border-bottom: 1px solid #C1A78E !important;
+  background: #ece1d7 !important;
+  border-bottom: 1px solid #c1a78e !important;
   color: #292522 !important;
 }
 
 #vomnibar li.selected {
-  background: #C1A78E !important;
+  background: #c1a78e !important;
 }
 
 #vomnibar li .title,
@@ -67,7 +69,7 @@ div > .vimiumActiveHintMarker span {
 }
 
 #vomnibar li .url {
-  color: #7F91B2 !important;
+  color: #7f91b2 !important;
 }
 
 #vomnibar li .source {
@@ -75,11 +77,11 @@ div > .vimiumActiveHintMarker span {
 }
 
 #vomnibar li .match {
-  color: #E49B5D !important;
+  color: #e49b5d !important;
   font-weight: 600 !important;
 }
 
 #vomnibar li em .match,
 #vomnibar li .title .match {
-  color: #E49B5D !important;
+  color: #e49b5d !important;
 }
