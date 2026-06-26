@@ -10,6 +10,7 @@ path=(
     $BUN_INSTALL/bin
     $path
     $HOME/.jenv/bin:$PATH
+    $PATH:/Users/jeroen/.dotnet/tools
 )
 
 export PATH
