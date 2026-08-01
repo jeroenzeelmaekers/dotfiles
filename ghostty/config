@@ -2,7 +2,7 @@ theme = dark:Melange Dark, light:Melange Light
 
 font-family = MonoLisaCode 
 
-font-style = Medium 
+font-style = Medium
 font-style-italic = Medium Italic
 font-style-bold = Bold
 font-style-bold-italic = Bold Italic
@@ -17,4 +17,4 @@ macos-titlebar-style = hidden
 
 adjust-cell-height = 5%
 
-mouse-hide-whilwhene-typing = true
+mouse-hide-while-typing = true
