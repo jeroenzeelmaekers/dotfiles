@@ -1,63 +1,52 @@
-# Starship prompt
 eval "$(starship init zsh)"
 
-# Homebrew setup
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Restore macOS system paths
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-
-# Zinit installation
+# Zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+if [[ -r "${ZINIT_HOME}/zinit.zsh" ]]; then
+  source "${ZINIT_HOME}/zinit.zsh"
+
+  # zsh plugins
+  zinit light zsh-users/zsh-completions
+  zinit light zsh-users/zsh-autosuggestions
+  zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
+
+  # Snippets
+  zinit snippet OMZL::git.zsh
+  zinit snippet OMZP::git
+else
+  print -u2 "zinit not found at ${ZINIT_HOME}; skipping plugins"
 fi
 
-source "${ZINIT_HOME}/zinit.zsh"
-
-# zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode
-
-# Snippets
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
-
 # Load completions
-autoload -Uz compinit && compinit
-
-zinit cdreplay -q
+autoload -Uz compinit
+if [[ -n "${ZDOTDIR:-$HOME}/.zcompdump"(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+(( ${+functions[zinit]} )) && zinit cdreplay -q
+if (( ${+functions[zinit]} )); then
+  zinit light Aloxaf/fzf-tab
+  zinit light zsh-users/zsh-syntax-highlighting
+fi
 
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-setopt appendhistory
+setopt append_history
+setopt extended_history
 setopt sharehistory
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt hist_reduce_blanks
 
-# Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --color=always $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always $realpath'
-
-# Alias
-alias ls='eza --color=always'
-alias cat="bat"
-alias vim='nvim'
-alias lg='lazygit'
+source "$HOME/.aliases.zsh"
 
 # Shell integrations
 eval "$(rbenv init - zsh)"
@@ -65,15 +54,12 @@ eval "$(nodenv init -)"
 eval "$(jenv init -)"
 
 # Java
-export JAVA_HOME="$(jenv javahome)"
-export PATH="$JAVA_HOME/bin:$PATH"
+java_home="$(jenv javahome 2>/dev/null)"
+if [[ -n "$java_home" ]]; then
+  export JAVA_HOME="$java_home"
+  path=("$JAVA_HOME/bin" $path)
+fi
+unset java_home
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
-# bun completions
-[ -s "/Users/jeroen/.bun/_bun" ] && source "/Users/jeroen/.bun/_bun"
