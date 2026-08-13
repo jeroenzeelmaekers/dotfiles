@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
+  cmd = { "LspInfo", "LspStart", "LspStop", "LspRestart" },
   dependencies = {
     "saghen/blink.cmp",
     { "antosha417/nvim-lsp-file-operations", config = true },
@@ -12,23 +13,10 @@ return {
       capabilities = capabilities,
     })
 
-    vim.lsp.config("vtsls", {
-      root_dir = function(bufnr, on_dir)
-        local root = vim.fs.root(bufnr, {
-          "angular.json",
-          "tsconfig.json",
-          "jsconfig.json",
-          "package-lock.json",
-          "yarn.lock",
-          "pnpm-lock.yaml",
-          "bun.lockb",
-          "bun.lock",
-          "package.json",
-          ".git",
-        })
-        on_dir(root or vim.fn.getcwd())
-      end,
+    vim.lsp.config("tsc", {
       single_file_support = false,
     })
+
+    vim.lsp.enable("tsc")
   end,
 }

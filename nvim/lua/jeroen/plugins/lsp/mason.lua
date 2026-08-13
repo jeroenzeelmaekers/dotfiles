@@ -2,14 +2,15 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      automatic_enable = true,
+      automatic_enable = {
+        exclude = { "tsgo" },
+      },
       ensure_installed = {
-        "vtsls",
+        "tsgo",
         "html",
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "emmet_ls",
       },
     },
     dependencies = {
@@ -33,8 +34,6 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
-        "prettier",
-        "eslint_d",
         "oxlint",
       },
     },
