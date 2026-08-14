@@ -29,7 +29,42 @@ return {
       function()
         Snacks.lazygit.open()
       end,
-      desc = "Document symbols",
+      desc = "LazyGit",
+    },
+    {
+      "<leader>fb",
+      function()
+        Snacks.picker.buffers()
+      end,
+      desc = "Buffers",
+    },
+    {
+      "<leader>fr",
+      function()
+        Snacks.picker.recent()
+      end,
+      desc = "Recent files",
+    },
+    {
+      "<leader>sd",
+      function()
+        Snacks.picker.diagnostics()
+      end,
+      desc = "Workspace diagnostics",
+    },
+    {
+      "<leader>sD",
+      function()
+        Snacks.picker.diagnostics_buffer()
+      end,
+      desc = "Buffer diagnostics",
+    },
+    {
+      "<leader>sk",
+      function()
+        Snacks.picker.keymaps()
+      end,
+      desc = "Keymaps",
     },
   },
   ---@type snacks.Config

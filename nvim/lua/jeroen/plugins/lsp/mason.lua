@@ -1,11 +1,12 @@
 return {
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     opts = {
       automatic_enable = {
         exclude = { "tsgo" },
       },
       ensure_installed = {
+        -- mason-lspconfig still installs the Typescript server under the legacy tsgo name.
         "tsgo",
         "html",
         "cssls",
@@ -15,7 +16,7 @@ return {
     },
     dependencies = {
       {
-        "williamboman/mason.nvim",
+        "mason-org/mason.nvim",
         opts = {
           ui = {
             icons = {
@@ -38,7 +39,7 @@ return {
       },
     },
     dependencies = {
-      "williamboman/mason.nvim",
+      "mason-org/mason.nvim",
     },
   },
 }
