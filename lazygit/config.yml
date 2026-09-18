@@ -1,3 +1,6 @@
 git:
   autoFetch: false
   overrideGpg: true
+gui:
+  showBottomLine: true
+  showRandomTip: false
