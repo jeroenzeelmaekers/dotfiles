@@ -71,6 +71,11 @@ return {
   opts = {
     picker = {
       ui_select = true,
+      layout = {
+        layout = {
+          backdrop = false,
+        },
+      },
       sources = {
         files = {
           exclude = { "node_modules", "Pods", "android", "vendor", "target", ".dist" },
@@ -81,7 +86,10 @@ return {
       },
     },
     input = { enabled = true },
-    lazygit = { enabled = true },
+    lazygit = { enabled = true, win = {
+      border = "rounded",
+      backdrop = false,
+    } },
     image = { enabled = true },
     statuscolumn = {
       enabled = true,
