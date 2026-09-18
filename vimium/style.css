@@ -9,17 +9,17 @@ div.internal-vimium-hint-marker {
 
 div.internal-vimium-hint-marker span {
   color: #292522 !important;
-  font-family: "MonoLisaCode", monospace !important;
+  font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
   font-weight: 600 !important;
   text-shadow: none !important;
 }
 
-div.internal-vimium-hint-marker > .matchingCharacter {
+div.internal-vimium-hint-marker>.matchingCharacter {
   color: #78997a !important;
 }
 
-div > .vimiumActiveHintMarker span {
+div>.vimiumActiveHintMarker span {
   color: #bd8183 !important;
 }
 
@@ -38,7 +38,7 @@ div > .vimiumActiveHintMarker span {
 #vomnibar input {
   background: #c1a78e !important;
   color: #292522 !important;
-  font-family: "MonoLisaCode", monospace !important;
+  font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
   border: none !important;
   box-shadow: none !important;
