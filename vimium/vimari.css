@@ -17,10 +17,11 @@ div.internalVimiumHintMarker.vimiumReset span {
   color: #292522 !important;
   font-family: "Berkeley Mono", monospace !important;
   font-weight: 600 !important;
+  font-size: 13px !important;
   text-shadow: none !important;
 }
 
-div.internalVimiumHintMarker.vimiumReset > .matchingCharacter {
+div.internalVimiumHintMarker.vimiumReset>.matchingCharacter {
   color: #78997A !important;
 }
 
@@ -35,6 +36,7 @@ div.internalVimiumHintMarker.vimiumReset > .matchingCharacter {
 
 .vimiumHUD.vimiumReset * {
   font-family: "Berkeley Mono", monospace !important;
+  font-size: 13px !important;
   color: #292522 !important;
 }
 
@@ -42,6 +44,7 @@ div.internalVimiumHintMarker.vimiumReset > .matchingCharacter {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
