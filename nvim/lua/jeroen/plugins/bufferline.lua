@@ -4,8 +4,8 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   event = "VeryLazy",
   keys = {
-    { "<S-h>", "<cmd>tabprevious<CR>", desc = "Prev tab" },
-    { "<S-l>", "<cmd>tabnext<CR>", desc = "Next tab" },
+    { "<S-k>", "<cmd>tabprevious<CR>", desc = "Prev tab" },
+    { "<S-j>", "<cmd>tabnext<CR>", desc = "Next tab" },
     { "<leader>tn", "<cmd>tabnew<CR>", desc = "New tab" },
     { "<leader>tx", "<cmd>tabclose<CR>", desc = "Close tab" },
     { "<leader>to", "<cmd>tabonly<CR>", desc = "Close other tabs" },

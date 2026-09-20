@@ -2,12 +2,8 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      automatic_enable = {
-        exclude = { "tsgo" },
-      },
       ensure_installed = {
-        -- mason-lspconfig still installs the Typescript server under the legacy tsgo name.
-        "tsgo",
+        "tsc",
         "html",
         "cssls",
         "tailwindcss",
