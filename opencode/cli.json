@@ -23,5 +23,6 @@
   },
   "keybinds": {
     "agent.cycle": "tab"
-  }
+  },
+  "plugins": ["./herdr-opencode"]
 }
