@@ -84,3 +84,6 @@ peach = "#BC5C00"
 
 [ui]
 status_indicators = "symbols"
+
+[ui.sound]
+enabled = false
