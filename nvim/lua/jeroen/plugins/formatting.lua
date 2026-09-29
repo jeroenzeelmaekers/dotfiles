@@ -1,20 +1,6 @@
 return {
   "stevearc/conform.nvim",
   event = { "BufReadPre", "BufNewFile" },
-  keys = {
-    {
-      "<leader>mp",
-      function()
-        require("conform").format({
-          lsp_format = "fallback",
-          async = false,
-          timeout_ms = 3000,
-        })
-      end,
-      mode = { "n", "v" },
-      desc = "Format file or selection",
-    },
-  },
   opts = {
     formatters_by_ft = {
       javascript = { "oxfmt", "prettier", stop_after_first = true },
@@ -27,17 +13,6 @@ return {
       yaml = { "prettier" },
       lua = { "stylua" },
       csharp = { "csharpier" },
-    },
-    formatters = {
-      oxfmt = {
-        condition = function(_, ctx)
-          return vim.fs.find({ ".oxfmtrc.json", ".oxfmtrc.jsonc" }, {
-            path = ctx.filename,
-            upward = true,
-            stop = vim.uv.os_homedir(),
-          })[1] ~= nil
-        end,
-      },
     },
     format_on_save = {
       lsp_format = "fallback",

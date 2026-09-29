@@ -11,6 +11,12 @@ return {
 
     vim.lsp.config("*", {
       capabilities = capabilities,
+      on_attach = function(client)
+        -- Keep opened buffers visually consistent with Snacks file previews.
+        -- Previews use Treesitter highlighting, while semantic tokens add a
+        -- second layer of highlights once an LSP client attaches.
+        client.server_capabilities.semanticTokensProvider = nil
+      end,
     })
 
     vim.lsp.config("tsc", {
