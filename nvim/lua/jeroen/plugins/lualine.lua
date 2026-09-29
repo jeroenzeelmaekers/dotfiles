@@ -12,7 +12,7 @@ return {
         item.color = vim.tbl_extend("force", item.color or {}, vim.deepcopy(color))
       end
 
-      item.separator = { left = "", right = "" }
+      -- item.separator = { left = "", right = "" }
       item.padding = item.padding or { left = 1, right = 1 }
       return item
     end
