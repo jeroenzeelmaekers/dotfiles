@@ -69,3 +69,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.config/vite-plus/env"
+
+# opencode
+export PATH=/Users/jeroen/.opencode/bin:$PATH
