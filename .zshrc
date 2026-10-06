@@ -63,3 +63,7 @@ unset java_home
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# bun completions
+[ -s "/Users/jeroen/.bun/_bun" ] && source "/Users/jeroen/.bun/_bun"
+
