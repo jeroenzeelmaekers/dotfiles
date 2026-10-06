@@ -5,12 +5,12 @@
   "default_agent": "plan",
   "agent": {
     "plan": {
-      "model": "github-copilot/gpt-5.6-sol",
+      "model": "github-copilot/gpt-6.1-sol",
       "color": "#6F9B72",
       "variant": "low"
     },
     "build": {
-      "model": "github-copilot/gpt-5.6-luna",
+      "model": "github-copilot/gpt-6-luna",
       "color": "#BC5C00"
     }
   }
