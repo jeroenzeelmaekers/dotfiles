@@ -18,3 +18,6 @@ export PATH
 # Source cargo environment (adds ~/.cargo/bin to PATH)
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.config/vite-plus/env"

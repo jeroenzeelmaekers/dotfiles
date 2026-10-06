@@ -67,3 +67,5 @@ eval "$(zoxide init --cmd cd zsh)"
 # bun completions
 [ -s "/Users/jeroen/.bun/_bun" ] && source "/Users/jeroen/.bun/_bun"
 
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.config/vite-plus/env"
