@@ -89,3 +89,7 @@ after-startup-command = [
 [[on-window-detected]]
   if.app-name-regex-substring = 'mail'
   run = ['move-node-to-workspace mail', 'focus-back-and-forth']
+
+[[on-window-detected]]
+  if.app-name-regex-substring = 'parallels'
+  run = 'layout tiling'
