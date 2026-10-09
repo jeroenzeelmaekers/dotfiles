@@ -1,2 +1,2 @@
-# Local OpenCode service credentials
-/opencode/service.json
+# Files left behind by the pre-Nix OpenCode layout.
+/opencode/
