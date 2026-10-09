@@ -10,6 +10,8 @@
     lazydocker
     lazygit
     mosh
+    nodejs
+    ruby
     resvg
     ripgrep
     starship

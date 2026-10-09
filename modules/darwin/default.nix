@@ -45,12 +45,7 @@
 
     brews = [
       "docker"
-      "libpq"
-      "maven"
       "mole"
-      "nodenv"
-      "pnpm"
-      "rbenv"
       "rjyo/moshi/moshi-hook"
       "tree-sitter-cli"
     ];
