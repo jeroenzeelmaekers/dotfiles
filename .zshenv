@@ -3,7 +3,7 @@ export BUN_INSTALL="$HOME/.bun"
 
 # PATH configuration (consolidated for efficiency)
 typeset -U PATH  # Ensure unique entries only
-export PATH=""
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 path=(
     /opt/homebrew/bin
     /usr/local/opt/rustup/bin

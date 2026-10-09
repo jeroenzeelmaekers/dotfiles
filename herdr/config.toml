@@ -83,6 +83,7 @@ teal = "#739797"
 peach = "#BC5C00"
 
 [ui]
+sidebar_collapsed_mode = "compact"
 status_indicators = "symbols"
 
 [ui.sound]
