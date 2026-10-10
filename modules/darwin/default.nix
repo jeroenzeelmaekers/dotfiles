@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [ ./aerospace.nix ];
 
@@ -52,6 +52,10 @@
 
     CustomSystemPreferences."com.apple.loginwindow".RetriesUntilHint = 0;
   };
+
+  system.activationScripts.postActivation.text = lib.mkAfter ''
+    /usr/bin/mdutil -a -i off
+  '';
 
   homebrew = {
     enable = true;

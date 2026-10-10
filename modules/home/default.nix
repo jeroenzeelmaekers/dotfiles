@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   imports = [
     ./packages.nix
@@ -15,6 +15,11 @@
   ];
 
   xdg.enable = true;
+
+  home.activation.configureSpotlight = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    /usr/bin/defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
+    /usr/bin/defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 '{enabled = 0;}'
+  '';
 
   programs.direnv = {
     enable = true;
