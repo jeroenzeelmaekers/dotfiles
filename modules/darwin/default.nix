@@ -35,7 +35,7 @@
       HideUserAvatarAndName = true;
       LoginwindowText = "";
       RestartDisabled = false;
-      SHOWFULLNAME = true;
+      SHOWFULLNAME = false;
       ShutDownDisabled = false;
       SleepDisabled = false;
     };
