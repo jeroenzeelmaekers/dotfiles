@@ -21,6 +21,8 @@
     dock = {
       autohide = true;
       mru-spaces = false;
+      persistent-apps = [];
+      persistent-others = [];
       show-recents = false;
       tilesize = 58;
     };
