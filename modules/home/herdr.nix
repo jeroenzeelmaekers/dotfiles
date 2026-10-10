@@ -1,5 +1,61 @@
-{ ... }:
+{ pkgs, ... }:
+let
+  herdrPlugins = [
+    {
+      id = "vim-herdr-navigation";
+      source = "paulbkim-dev/vim-herdr-navigation";
+    }
+  ];
+
+  restoreHerdrPlugins = pkgs.writeShellApplication {
+    name = "herdr-restore-plugins";
+    runtimeInputs = [ pkgs.jq ];
+    text = ''
+      plugins_json='${builtins.toJSON herdrPlugins}'
+
+      if ! command -v herdr >/dev/null 2>&1; then
+        echo "herdr-restore-plugins: herdr is not on PATH" >&2
+        exit 1
+      fi
+
+      installed_json="$(herdr plugin list --json)"
+      plugin_rows="$(jq -ce '
+        (.result.plugins // .plugins)
+        | if type == "array" then . else error("plugin list did not contain a plugins array") end
+      ' <<<"$installed_json")"
+
+      while IFS= read -r plugin; do
+        id="$(jq -r '.id' <<<"$plugin")"
+        source="$(jq -r '.source' <<<"$plugin")"
+        existing="$(jq -c --arg id "$id" '[.[] | select(.plugin_id == $id)][0] // empty' <<<"$plugin_rows")"
+
+        if [[ -z "$existing" ]]; then
+          echo "Installing latest $id from $source"
+          herdr plugin install "$source" --yes
+          continue
+        fi
+
+        source_kind="$(jq -r '.source.kind // "unknown"' <<<"$existing")"
+        if [[ "$source_kind" != "github" ]]; then
+          echo "herdr-restore-plugins: $id is installed from a non-GitHub source; unlink or uninstall it before restoring" >&2
+          exit 1
+        fi
+
+        installed_source="$(jq -r '[.source.owner // "", .source.repo // ""] | join("/")' <<<"$existing")"
+        if [[ "$installed_source" != "$source" ]]; then
+          echo "herdr-restore-plugins: $id is installed from $installed_source, but $source is declared; resolve the source change manually" >&2
+          exit 1
+        fi
+
+        echo "Installing latest $id from $source"
+        herdr plugin install "$source" --yes
+      done < <(jq -c '.[]' <<<"$plugins_json")
+    '';
+  };
+in
 {
+  home.packages = [ restoreHerdrPlugins ];
+
   programs.herdr = {
     enable = true;
     settings = {
