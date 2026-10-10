@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
   herdrPlugins = [
     {
@@ -9,7 +9,7 @@ let
 
   restoreHerdrPlugins = pkgs.writeShellApplication {
     name = "herdr-restore-plugins";
-    runtimeInputs = [ pkgs.jq ];
+    runtimeInputs = [ pkgs.jq config.programs.herdr.package ];
     text = ''
       plugins_json='${builtins.toJSON herdrPlugins}'
 
@@ -55,6 +55,12 @@ let
 in
 {
   home.packages = [ restoreHerdrPlugins ];
+
+  home.activation.restoreHerdrPlugins = lib.hm.dag.entryAfter [ "installPackages" ] ''
+    if ! ${restoreHerdrPlugins}/bin/herdr-restore-plugins; then
+      echo "Warning: Herdr plugin restore failed. Run herdr-restore-plugins to retry." >&2
+    fi
+  '';
 
   programs.herdr = {
     enable = true;
