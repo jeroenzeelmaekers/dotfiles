@@ -11,10 +11,11 @@
   system.defaults = {
     NSGlobalDomain = {
       AppleInterfaceStyleSwitchesAutomatically = true;
+      ApplePressAndHoldEnabled = false;
       AppleShowAllExtensions = true;
-      InitialKeyRepeat = 15;
-      KeyRepeat = 2;
-      "com.apple.swipescrolldirection" = false;
+      InitialKeyRepeat = 10;
+      KeyRepeat = 1;
+      "com.apple.swipescrolldirection" = true;
     };
 
     dock = {
