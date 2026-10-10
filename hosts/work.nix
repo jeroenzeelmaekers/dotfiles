@@ -1,13 +1,25 @@
 { ... }:
 {
-  # Update this account and home directory if the work Mac uses another
-  # macOS username before its first activation.
   system.primaryUser = "jeroen.zeelmaekers";
   users.users.jeroen.home = "/Users/jeroen.zeelmaekers";
+
+  services.aerospace.settings.workspace-to-monitor-force-assignment = {
+    misc_2 = 2;
+    misc_3 = 2;
+  };
 
   homebrew.casks = [
     "1password"
     "ghostty"
+    "bartender"
+    "cleanshot"
+    "codexbar"
+    "figma"
+    "istat-menus"
+    "pixelsnap"
+    "rapidapi"
+    "tableplus"
+    "spotify"
   ];
 
   home-manager = {
