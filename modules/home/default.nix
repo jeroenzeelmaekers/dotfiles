@@ -12,6 +12,7 @@
     ./yazi.nix
     ./neovim.nix
     ./opencode.nix
+    ./macos-settings.nix
   ];
 
   xdg.enable = true;

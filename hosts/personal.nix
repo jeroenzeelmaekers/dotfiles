@@ -3,6 +3,30 @@
   system.primaryUser = "jeroen";
   users.users.jeroen.home = "/Users/jeroen";
 
+  programs.nix-plist-manager.options.applications.systemSettings = {
+    general.softwareUpdate = {
+      automaticallyDownloadNewUpdatesWhenAvailable = true;
+      automaticallyInstallApplicationUpdatesFromTheAppStore = true;
+      automaticallyInstallMacOSUpdates = true;
+      automaticallyInstallSystemDataFilesAndSecurityUpdates = true;
+    };
+
+    network.firewall = {
+      firewall = true;
+      options = {
+        automaticallyAllowBuiltInSoftwareToReceiveIncomingConnections = true;
+        automaticallyAllowDownloadedSignedSoftwareToReceiveIncomingConnections = true;
+        blockAllIncomingConnections = false;
+        enableStealthMode = false;
+      };
+    };
+
+    privacyAndSecurity.analyticsAndImprovements = {
+      shareMacAnalytics = false;
+      shareWithAppDevelopers = false;
+    };
+  };
+
   services.aerospace.settings.workspace-to-monitor-force-assignment = {
     misc_2 = 2;
     misc_3 = 2;
@@ -56,13 +80,19 @@
     useUserPackages = true;
     backupFileExtension = "pre-nix";
 
-    users.jeroen = {
+    users.jeroen = { lib, pkgs, ... }: {
       imports = [
         ../modules/home
         ../profiles/personal.nix
       ];
 
+      home.activation.setDefaultBrowser = lib.hm.dag.entryAfter [ "installPackages" ] ''
+        ${pkgs.duti}/bin/duti -s net.imput.helium http all
+        ${pkgs.duti}/bin/duti -s net.imput.helium https all
+      '';
+
       home = {
+        packages = [ pkgs.duti ];
         username = "jeroen";
         homeDirectory = "/Users/jeroen";
         stateVersion = "26.05";

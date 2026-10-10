@@ -8,51 +8,34 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 7;
 
+  programs.nix-plist-manager = {
+    enable = true;
+    options.applications.systemSettings.lockScreen = {
+      loginWindowShows = "List of users";
+      messageWhenLocked = "";
+      showPasswordHints = false;
+      showTheSleepRestartAndShutDownButtons = true;
+    };
+  };
+
   system.defaults = {
     NSGlobalDomain = {
-      AppleInterfaceStyleSwitchesAutomatically = true;
       ApplePressAndHoldEnabled = false;
-      AppleShowAllExtensions = true;
-      InitialKeyRepeat = 15;
-      KeyRepeat = 2;
-      "com.apple.swipescrolldirection" = false;
     };
 
     dock = {
-      autohide = true;
-      mru-spaces = false;
       persistent-apps = [];
       persistent-others = [];
-      show-recents = false;
-      tilesize = 58;
     };
 
     finder = {
       FXPreferredViewStyle = "icnv";
-      ShowPathbar = true;
-      ShowStatusBar = true;
     };
 
     loginwindow = {
       HideUserAvatarAndName = true;
-      LoginwindowText = "";
-      RestartDisabled = false;
-      SHOWFULLNAME = false;
-      ShutDownDisabled = false;
-      SleepDisabled = false;
     };
 
-    menuExtraClock = {
-      IsAnalog = false;
-      Show24Hour = true;
-      ShowAMPM = false;
-      ShowDate = 2;
-      ShowDayOfMonth = false;
-      ShowDayOfWeek = false;
-      ShowSeconds = false;
-    };
-
-    CustomSystemPreferences."com.apple.loginwindow".RetriesUntilHint = 0;
   };
 
   system.activationScripts.postActivation.text = lib.mkAfter ''
