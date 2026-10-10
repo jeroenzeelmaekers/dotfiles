@@ -1,2 +1,3 @@
-# Local OpenCode service credentials
-/opencode/service.json
+# Nix build outputs
+/result
+/result-*

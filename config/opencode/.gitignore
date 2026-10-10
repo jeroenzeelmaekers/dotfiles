@@ -1,0 +1,6 @@
+# Per-device credentials and installed plugin dependencies.
+/service.json
+/node_modules/
+
+# OpenCode and package-manager runtime files.
+/.package-lock.json

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>build</key>
+	<string>2282</string>
+	<key>preferences</key>
+	<dict>
+		<key>CPU.Menu.Graph.Efficiency.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>CPU.Menu.Graph.GPU.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>CPU.Menu.Graph.Performance.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>CPU.Menu.Graph.System.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>CPU.Menu.Graph.User.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>CPU.Menubar.Mode.Cores.Graph.Efficiency.Dark.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>CPU.Menubar.Mode.Cores.Graph.Performance.Dark.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>CPU.Menubar.Mode.VerticalGraph.Graph.Performance.Dark.Color</key>
+		<string>0.9686274509803922 0.3098039215686275 0.6196078431372549 1</string>
+		<key>Combined.Menubar.Items</key>
+		<array/>
+		<key>Device.Auth-Identifier</key>
+		<string>B73AB533-53EB-4B92-9800-816D22B6F32F</string>
+		<key>Device.Device</key>
+		<string>35e9707b94dd1254aa16308997350b8f9a7b3f23</string>
+		<key>Device.Model</key>
+		<string>Mac16,11</string>
+		<key>License.License</key>
+		<string>dote-lone-mend-earl-6903-7</string>
+		<key>License.Validation.hashversion</key>
+		<string>3</string>
+		<key>License.Validation.license</key>
+		<string>dote-lone-mend-earl-6903-7</string>
+		<key>License.Validation.signature</key>
+		<string>MIGGAkFWwz7gM/c+ZeYliG6nTC1sWb9qx9AkWggbGHQTEyBUJnPlcrkWoGkqujOp8FIMCYx9bg5+Z2CKPIqfuxmkUpJcTgJBWzdcZFOrcqa0KE1+tQQCDMifvZdpDpDIKxvKkyKGRtFT1VQjlOznlZgFe+aI0rFnlQMFm/qjPdFkyOQHk2ste08=</string>
+		<key>License.Validation.time</key>
+		<string>1790526360</string>
+		<key>Memory.Menu.Graph.App.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Memory.Menu.Graph.Compressed.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Memory.Menu.Graph.Pressure.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>Memory.Menu.Graph.Swap.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>Memory.Menu.Graph.Wired.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>Memory.Menu.Processes.Format</key>
+		<integer>2</integer>
+		<key>Memory.Menubar.Mode.VerticalGraph.Memory.Graph.App.Dark.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Memory.Menubar.Mode.VerticalGraph.Memory.Graph.Compressed.Dark.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Memory.Menubar.Mode.VerticalGraph.Memory.Graph.Wired.Dark.Color</key>
+		<string>0.7803921568627451 0.4862745098039216 0.5450980392156862 1</string>
+		<key>Memory.Menubar.Mode.VerticalGraph.Pressure.Graph.Pressure.Dark.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Menu.HeaderColor</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Menu.Theme.Dark</key>
+		<string>light</string>
+		<key>Menu.Theme.Light</key>
+		<string>gray</string>
+		<key>Menubar.Global.ReducePadding</key>
+		<integer>1</integer>
+		<key>Menubar.Style</key>
+		<integer>1</integer>
+		<key>Menubar.Theme.Dark</key>
+		<string>mono</string>
+		<key>MenubarCurrentApperance</key>
+		<string>Dark</string>
+		<key>Migration.CombinedPowerItems</key>
+		<true/>
+		<key>Migration.Profiles</key>
+		<true/>
+		<key>Notifications.Enabled</key>
+		<integer>0</integer>
+		<key>Notifications.Items</key>
+		<array>
+			<dict>
+				<key>enabled</key>
+				<integer>0</integer>
+				<key>source</key>
+				<string>battery-low</string>
+				<key>type</key>
+				<string>alert</string>
+				<key>uuid</key>
+				<string>4e1abe18-f00e-4f2f-9a69-1ee6d04643f4</string>
+			</dict>
+			<dict>
+				<key>enabled</key>
+				<integer>0</integer>
+				<key>source</key>
+				<string>daylightsaving</string>
+				<key>time</key>
+				<integer>0</integer>
+				<key>type</key>
+				<string>alert</string>
+				<key>uuid</key>
+				<string>7ad71b8c-c416-49c9-a5bc-41f76628c118</string>
+			</dict>
+			<dict>
+				<key>enabled</key>
+				<integer>0</integer>
+				<key>item</key>
+				<dict>
+					<key>key</key>
+					<string>any</string>
+				</dict>
+				<key>source</key>
+				<string>temperature</string>
+				<key>time</key>
+				<string>30</string>
+				<key>type</key>
+				<string>banner</string>
+				<key>uuid</key>
+				<string>3e5ac3eb-5a05-4b12-82fe-a51860e5851d</string>
+				<key>value</key>
+				<string>95</string>
+			</dict>
+		</array>
+		<key>Profiles.Available.identifier</key>
+		<string>default</string>
+		<key>Profiles.Settings.default.CPU.Menubar.Items</key>
+		<array>
+			<dict>
+				<key>source</key>
+				<integer>1</integer>
+				<key>subtype</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>3</integer>
+				<key>useroptions</key>
+				<dict>
+					<key>display</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+		</array>
+		<key>Profiles.Settings.default.Combined.Menubar.Items</key>
+		<array/>
+		<key>Profiles.Settings.default.Disks.Menubar.Enabled</key>
+		<integer>0</integer>
+		<key>Profiles.Settings.default.Memory.Menubar.Enabled</key>
+		<integer>1</integer>
+		<key>Profiles.Settings.default.Memory.Menubar.Items</key>
+		<array>
+			<dict>
+				<key>source</key>
+				<integer>3</integer>
+				<key>type</key>
+				<integer>3</integer>
+				<key>useroptions</key>
+				<dict>
+					<key>display</key>
+					<integer>2</integer>
+				</dict>
+			</dict>
+		</array>
+		<key>Profiles.Settings.default.Network.Menubar.Enabled</key>
+		<integer>0</integer>
+		<key>Profiles.Settings.default.Sensors.Menubar.Items</key>
+		<array>
+			<dict>
+				<key>source</key>
+				<integer>7</integer>
+				<key>subtype</key>
+				<integer>6</integer>
+				<key>type</key>
+				<integer>7</integer>
+			</dict>
+		</array>
+		<key>Profiles.Settings.default.Sensors.Menubar.Sensors</key>
+		<array>
+			<dict>
+				<key>ShowUnits</key>
+				<true/>
+				<key>key</key>
+				<string>52ca7f073fc14f94afbb9e70886ede2866f144ad</string>
+				<key>name</key>
+				<string>Total Power</string>
+				<key>source</key>
+				<integer>1</integer>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+		</array>
+		<key>Sensors.Global.Degrees.Format</key>
+		<integer>1</integer>
+		<key>Sensors.Global.DetailLevel</key>
+		<integer>0</integer>
+		<key>Sensors.Global.Fans.Curves.all.curve</key>
+		<array>
+			<dict>
+				<key>speed</key>
+				<integer>0</integer>
+				<key>temperature</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>speed</key>
+				<integer>0</integer>
+				<key>temperature</key>
+				<real>0.45000000000000001</real>
+			</dict>
+			<dict>
+				<key>speed</key>
+				<real>1</real>
+				<key>temperature</key>
+				<real>0.94999999999999996</real>
+			</dict>
+			<dict>
+				<key>speed</key>
+				<real>1</real>
+				<key>temperature</key>
+				<real>1</real>
+			</dict>
+		</array>
+		<key>Sensors.Menu.Graph.Sensor.Color</key>
+		<string>0.4352941176470588 0.6078431372549019 0.4470588235294118 1</string>
+		<key>Sensors.Menubar.Mode.Value.Font.Size</key>
+		<integer>1</integer>
+		<key>Status.BackgroundInstall</key>
+		<true/>
+		<key>Status.Build.Last</key>
+		<real>2282</real>
+		<key>Status.Version.Last</key>
+		<real>7.3000001907348633</real>
+		<key>Updates.Attempts.2282</key>
+		<integer>1</integer>
+	</dict>
+	<key>version</key>
+	<string>7</string>
+</dict>
+</plist>
