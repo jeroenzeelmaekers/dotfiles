@@ -30,17 +30,18 @@
     "android-studio"
     "raycast"
   ];
-
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }
     { name = "osx-cross/arm"; trusted = true; }
     { name = "osx-cross/avr"; trusted = true; }
     { name = "steipete/tap"; trusted = true; }
+    { name = "anomalyco/tap"; trusted = true; }
   ];
 
   homebrew.brews = [
     "qmk/qmk/qmk"
     "xcodes"
+    "anomalyco/tap/opencode-v2"
   ];
 
   homebrew.masApps = {

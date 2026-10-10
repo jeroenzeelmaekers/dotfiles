@@ -24,6 +24,11 @@
 
   homebrew.taps = [
     { name = "steipete/tap"; trusted = true; }
+    { name = "anomalyco/tap"; trusted = true; }
+  ];
+
+  homebrew.brews = [
+    "anomalyco/tap/opencode-v2"
   ];
 
   home-manager = {
