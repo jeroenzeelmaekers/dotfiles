@@ -31,7 +31,26 @@
       ShowStatusBar = true;
     };
 
-    loginwindow.SHOWFULLNAME = true;
+    loginwindow = {
+      HideUserAvatarAndName = true;
+      LoginwindowText = "";
+      RestartDisabled = false;
+      SHOWFULLNAME = true;
+      ShutDownDisabled = false;
+      SleepDisabled = false;
+    };
+
+    menuExtraClock = {
+      IsAnalog = false;
+      Show24Hour = true;
+      ShowAMPM = false;
+      ShowDate = 2;
+      ShowDayOfMonth = false;
+      ShowDayOfWeek = false;
+      ShowSeconds = false;
+    };
+
+    CustomSystemPreferences."com.apple.loginwindow".RetriesUntilHint = 0;
   };
 
   homebrew = {
