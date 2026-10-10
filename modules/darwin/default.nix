@@ -15,7 +15,7 @@
       AppleShowAllExtensions = true;
       InitialKeyRepeat = 10;
       KeyRepeat = 1;
-      "com.apple.swipescrolldirection" = true;
+      "com.apple.swipescrolldirection" = false;
     };
 
     dock = {
