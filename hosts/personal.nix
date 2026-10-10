@@ -22,7 +22,6 @@
     "protonvpn"
     "qmk-toolbox"
     "rapidapi"
-    "sizzy"
     "skim"
     "spotify"
     "tableplus"
