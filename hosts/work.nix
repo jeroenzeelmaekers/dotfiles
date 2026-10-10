@@ -22,6 +22,10 @@
     "spotify"
   ];
 
+  homebrew.taps = [
+    { name = "steipete/tap"; trusted = true; }
+  ];
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;

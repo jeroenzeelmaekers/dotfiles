@@ -10,7 +10,6 @@
 
   homebrew.casks = [
     "1password"
-    "appcleaner"
     "bartender"
     "cleanshot"
     "codexbar"
@@ -28,18 +27,29 @@
     "spotify"
     "tableplus"
     "tailscale-app"
+    "android-studio"
+    "raycast"
   ];
 
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }
     { name = "osx-cross/arm"; trusted = true; }
-  { name = "osx-cross/avr"; trusted = true; }
+    { name = "osx-cross/avr"; trusted = true; }
+    { name = "steipete/tap"; trusted = true; }
   ];
 
   homebrew.brews = [
     "qmk/qmk/qmk"
     "xcodes"
   ];
+
+  homebrew.masApps = {
+    "1Password for Safari" = 1569813296;
+    "AdBlock Pro" = 1018301773;
+    "Dark Reader for Safari" = 1438243180;
+    "Dato" = 1470584107;
+    "Vimari" = 1480933944;
+  };
 
   home-manager = {
     useGlobalPkgs = true;
