@@ -1,7 +1,7 @@
 { ... }:
 {
   system.primaryUser = "jeroen.zeelmaekers";
-  users.users.jeroen.home = "/Users/jeroen.zeelmaekers";
+  users.users."jeroen.zeelmaekers".home = "/Users/jeroen.zeelmaekers";
 
   services.aerospace.settings.workspace-to-monitor-force-assignment = {
     misc_2 = 2;
@@ -36,7 +36,7 @@
     useUserPackages = true;
     backupFileExtension = "pre-nix";
 
-    users.jeroen = {
+    users."jeroen.zeelmaekers" = {
       imports = [
         ../modules/home
         ../profiles/work.nix
