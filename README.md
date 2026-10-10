@@ -13,16 +13,43 @@ modules/darwin/    macOS settings and system packages
 modules/home/      User packages and application settings
 config/            Application configuration files
 assets/            Themes, styles, and wallpapers
-scripts/            First-activation migration helper
+scripts/            Bootstrap and first-activation migration scripts
 ```
 
 Update the username and home directory in `hosts/work.nix` if they differ on
 the work Mac.
 
-## Use
+## Install
 
-Install Nix with flakes enabled and install Homebrew. Make sure the flake files
-are tracked by Git before running Nix commands.
+On an Apple Silicon Mac, open Terminal and run the command for the machine:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/jeroenzeelmaekers/dotfiles/main/scripts/bootstrap.sh | bash -s -- personal
+```
+
+Use `work` instead of `personal` on the work Mac. The script installs the Xcode
+Command Line Tools, Homebrew, and multi-user Nix if they are missing. It then
+clones this repository to `~/github/jeroenzeelmaekers/dotfiles` and activates
+the selected nix-darwin configuration. The work profile expects the macOS
+username `jeroen.zeelmaekers`; the personal profile expects `jeroen`.
+
+The script asks for confirmation before installation because the configuration
+uses Homebrew cleanup mode `zap`, which can remove packages and cask data not
+listed in the Nix configuration. It also needs administrator access. The
+Command Line Tools installer may open a macOS dialog.
+
+To inspect the script before running it, download it first:
+
+```sh
+curl -fsSLO https://raw.githubusercontent.com/jeroenzeelmaekers/dotfiles/main/scripts/bootstrap.sh
+less bootstrap.sh
+bash bootstrap.sh personal
+```
+
+## Manual use
+
+If Nix and Homebrew are already installed, make sure the flake files are
+tracked by Git before running Nix commands.
 
 Check and build the personal system:
 
