@@ -115,6 +115,56 @@ if ! command -v nix >/dev/null 2>&1; then
 fi
 nix_bin="$(command -v nix)"
 
+backup_shell_files() {
+  local file backup link_target
+  local files_count=0
+  local -a files_to_backup=()
+  local -a backups=()
+
+  for file in /etc/bashrc /etc/zshrc; do
+    [[ -e "$file" || -L "$file" ]] || continue
+
+    link_target="$(readlink "$file" 2>/dev/null || true)"
+    [[ "$link_target" == "/etc/static/${file##*/}" ]] && continue
+
+    backup="$file.before-nix-darwin"
+    if sudo test -e "$backup" || sudo test -L "$backup"; then
+      printf 'Cannot back up %s because %s already exists. Inspect both files, then move the existing backup before rerunning.\n' \
+        "$file" "$backup" >&2
+      return 1
+    fi
+
+    files_to_backup+=("$file")
+    backups+=("$backup")
+    files_count=$((files_count + 1))
+  done
+
+  ((files_count > 0)) || return 0
+
+  printf '\nNix-darwin needs to manage these shell startup files, but they already exist:\n'
+  printf '  %s\n' "${files_to_backup[@]}"
+  printf 'I can preserve them as:\n'
+  printf '  %s\n' "${backups[@]}"
+  printf 'Inspect the files first if they contain custom shell settings.\n'
+  printf 'Type "backup" to rename them and continue: '
+  IFS= read -r answer </dev/tty
+  if [[ "$answer" != backup ]]; then
+    printf 'Cancelled without changing the shell startup files.\n' >&2
+    return 1
+  fi
+
+  for index in "${!files_to_backup[@]}"; do
+    file="${files_to_backup[$index]}"
+    backup="${backups[$index]}"
+    if ! sudo mv -n "$file" "$backup" || sudo test -e "$file" || sudo test -L "$file"; then
+      printf 'Could not safely move %s to %s. Resolve this manually before retrying.\n' \
+        "$file" "$backup" >&2
+      return 1
+    fi
+    printf 'Saved %s as %s\n' "$file" "$backup"
+  done
+}
+
 mkdir -p "$(dirname "$repo_dir")"
 if [[ -e "$repo_dir" ]]; then
   if ! git -C "$repo_dir" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
@@ -141,6 +191,7 @@ fi
 printf 'Applying the %s Nix configuration. This may take several minutes.\n' "$profile"
 NIX_CONFIG='experimental-features = nix-command flakes' \
   nix build --no-link "$repo_dir#darwinConfigurations.$profile.system"
+backup_shell_files
 bash "$repo_dir/scripts/prepare-home-manager.sh"
 sudo env NIX_CONFIG='experimental-features = nix-command flakes' \
   "$nix_bin" run github:nix-darwin/nix-darwin/master#darwin-rebuild -- \
