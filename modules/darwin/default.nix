@@ -30,6 +30,8 @@
       ShowPathbar = true;
       ShowStatusBar = true;
     };
+
+    loginwindow.SHOWFULLNAME = true;
   };
 
   homebrew = {
