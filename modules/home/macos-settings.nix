@@ -45,8 +45,8 @@
         appleIntelligenceAndSiri.siri.enable = false;
 
         keyboard = {
-          delayUntilRepeat = 10;
-          keyRepeatRate = 1;
+          delayUntilRepeat = 15;
+          keyRepeatRate = 2;
           keyboardShortcuts = {
             inputSources = {
               selectNextSourceInInputMenu = false;
