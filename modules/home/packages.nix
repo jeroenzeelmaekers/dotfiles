@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     bat
     btop
+    cargo
     colima
     difftastic
     eza
@@ -14,6 +15,7 @@
     ruby
     resvg
     ripgrep
+    rustc
     starship
     yazi
     zoxide
