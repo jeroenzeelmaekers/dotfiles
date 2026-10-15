@@ -34,6 +34,14 @@
     "herdr"
   ];
 
+  homebrew.masApps = {
+    "1Password for Safari" = 1569813296;
+    "AdBlock Pro" = 1018301773;
+    "Dark Reader for Safari" = 1438243180;
+    "Dato" = 1470584107;
+    "Vimari" = 1480933944;
+  };
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
