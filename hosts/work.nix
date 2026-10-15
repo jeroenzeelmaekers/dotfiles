@@ -31,6 +31,7 @@
 
   homebrew.brews = [
     "anomalyco/tap/opencode-v2"
+    "herdr"
   ];
 
   home-manager = {

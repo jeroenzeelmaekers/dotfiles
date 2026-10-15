@@ -9,16 +9,20 @@ let
 
   restoreHerdrPlugins = pkgs.writeShellApplication {
     name = "herdr-restore-plugins";
-    runtimeInputs = [ pkgs.jq config.programs.herdr.package ];
+    runtimeInputs = [ pkgs.jq ];
     text = ''
       plugins_json='${builtins.toJSON herdrPlugins}'
 
-      if ! command -v herdr >/dev/null 2>&1; then
+      if command -v herdr >/dev/null 2>&1; then
+        herdr_bin="$(command -v herdr)"
+      elif [[ -x /opt/homebrew/bin/herdr ]]; then
+        herdr_bin=/opt/homebrew/bin/herdr
+      else
         echo "herdr-restore-plugins: herdr is not on PATH" >&2
         exit 1
       fi
 
-      installed_json="$(herdr plugin list --json)"
+      installed_json="$("$herdr_bin" plugin list --json)"
       plugin_rows="$(jq -ce '
         (.result.plugins // .plugins)
         | if type == "array" then . else error("plugin list did not contain a plugins array") end
@@ -31,7 +35,7 @@ let
 
         if [[ -z "$existing" ]]; then
           echo "Installing latest $id from $source"
-          herdr plugin install "$source" --yes
+          "$herdr_bin" plugin install "$source" --yes
           continue
         fi
 
@@ -48,7 +52,7 @@ let
         fi
 
         echo "Installing latest $id from $source"
-        herdr plugin install "$source" --yes
+        "$herdr_bin" plugin install "$source" --yes
       done < <(jq -c '.[]' <<<"$plugins_json")
     '';
   };
@@ -64,6 +68,7 @@ in
 
   programs.herdr = {
     enable = true;
+    package = null;
     settings = {
       onboarding = false;
       keys = {

@@ -2,7 +2,7 @@
 {
   imports = [ ./aerospace.nix ];
 
-  nix.package = pkgs.lix;
+  nix.package = pkgs.nixVersions.stable;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
@@ -45,7 +45,7 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
       cleanup = "zap";
       upgrade = false;
     };
@@ -56,6 +56,7 @@
 
     brews = [
       "docker"
+      "herdr"
       "mole"
       "rjyo/moshi/moshi-hook"
       "tree-sitter-cli"
