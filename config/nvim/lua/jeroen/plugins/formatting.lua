@@ -12,7 +12,7 @@ return {
       html = { "oxfmt", "prettier", stop_after_first = true },
       yaml = { "prettier" },
       lua = { "stylua" },
-      csharp = { "csharpier" },
+      nix = { "nixpkgs-fmt" },
     },
     format_on_save = {
       lsp_format = "fallback",
