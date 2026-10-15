@@ -51,7 +51,7 @@
     "tableplus"
     "tailscale-app"
     "android-studio"
-    "raycast"
+    "abue-ammar/tinycast/tinycast"
   ];
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }
@@ -59,6 +59,7 @@
     { name = "osx-cross/avr"; trusted = true; }
     { name = "steipete/tap"; trusted = true; }
     { name = "anomalyco/tap"; trusted = true; }
+    { name = "abue-ammar/tinycast"; trusted = true; }
   ];
 
   homebrew.brews = [

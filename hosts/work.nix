@@ -20,11 +20,13 @@
     "rapidapi"
     "tableplus"
     "spotify"
+    "abue-ammar/tinycast/tinycast"
   ];
 
   homebrew.taps = [
     { name = "steipete/tap"; trusted = true; }
     { name = "anomalyco/tap"; trusted = true; }
+    { name = "abue-ammar/tinycast"; trusted = true; }
   ];
 
   homebrew.brews = [
