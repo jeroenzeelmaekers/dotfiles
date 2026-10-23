@@ -24,8 +24,8 @@
     };
 
     dock = {
-      persistent-apps = [];
-      persistent-others = [];
+      persistent-apps = [ ];
+      persistent-others = [ ];
     };
 
     finder = {
@@ -50,15 +50,10 @@
       upgrade = false;
     };
 
-    taps = [
-      { name = "rjyo/moshi"; trusted = true; }
-    ];
-
     brews = [
       "docker"
       "herdr"
       "mole"
-      "rjyo/moshi/moshi-hook"
       "tree-sitter-cli"
     ];
 

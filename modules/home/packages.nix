@@ -10,7 +10,6 @@
     fzf
     lazydocker
     lazygit
-    mosh
     nodejs
     ruby
     resvg
