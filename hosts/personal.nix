@@ -52,6 +52,7 @@
     "tailscale-app"
     "android-studio"
     "abue-ammar/tinycast/tinycast"
+    "netnewswire"
   ];
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }
