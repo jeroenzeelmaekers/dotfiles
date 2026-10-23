@@ -18,6 +18,7 @@
         split_horizontal = "prefix+minus";
         navigate_workspace_up = [ "up" "k" ];
         navigate_workspace_down = [ "down" "j" ];
+        remove_worktree = "prefix+d";
         command = [
           {
             key = "ctrl+h";
