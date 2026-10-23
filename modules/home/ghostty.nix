@@ -6,11 +6,11 @@
     settings = {
       theme = "dark:Melange Dark, light:Melange Light";
       font-family = "Berkeley Mono";
-      font-style = "Medium";
-      font-style-italic = "Medium Italic";
+      font-style = "SemiBold";
+      font-style-italic = "SemiBold Italic";
       font-style-bold = "Bold";
       font-style-bold-italic = "Bold Italic";
-      font-size = 16;
+      font-size = 15;
       window-padding-balance = true;
       window-padding-x = 10;
       window-padding-y = 10;
