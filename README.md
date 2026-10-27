@@ -81,9 +81,19 @@ On the work Mac, replace `personal` with `work` in the commands.
 
 ## Update inputs
 
+Update all flake inputs, including `nixpkgs`:
+
 ```sh
 nix flake update
 nix flake check
 nix build .#darwinConfigurations.personal.system
 sudo darwin-rebuild switch --flake .#personal
 ```
+
+To update only `nixpkgs`, use `nix flake update nixpkgs` instead of
+`nix flake update`. This updates the package versions provided by `nixpkgs`
+without updating the other flake inputs.
+
+On the work Mac, replace `personal` with `work` in the build and switch
+commands. Review and commit the resulting `flake.lock` changes to keep the
+updated versions recorded in the repository.
