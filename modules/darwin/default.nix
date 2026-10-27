@@ -4,6 +4,11 @@
 
   nix.package = pkgs.nixVersions.stable;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.gc = {
+    automatic = true;
+    interval = { Hour = 3; Minute = 0; };
+    options = "--delete-old";
+  };
 
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 7;
