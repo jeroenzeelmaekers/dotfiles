@@ -53,6 +53,7 @@
     "android-studio"
     "abue-ammar/tinycast/tinycast"
     "netnewswire"
+    "openlogi"
   ];
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }

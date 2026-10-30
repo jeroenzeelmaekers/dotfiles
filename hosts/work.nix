@@ -21,6 +21,7 @@
     "tableplus"
     "spotify"
     "abue-ammar/tinycast/tinycast"
+    "openlogi"
   ];
 
   homebrew.taps = [
