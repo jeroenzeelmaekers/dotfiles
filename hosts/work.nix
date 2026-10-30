@@ -10,17 +10,18 @@
 
   homebrew.casks = [
     "1password"
-    "ghostty"
     "bartender"
     "cleanshot"
     "codexbar"
     "figma"
+    "ghostty"
     "istat-menus"
     "pixelsnap"
     "rapidapi"
     "tableplus"
     "spotify"
     "abue-ammar/tinycast/tinycast"
+    "netnewswire"
     "openlogi"
   ];
 
