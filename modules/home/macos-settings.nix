@@ -48,6 +48,7 @@
           delayUntilRepeat = 15;
           keyRepeatRate = 2;
           keyboardShortcuts = {
+            spotlight.showSpotlightSearch = false;
             inputSources = {
               selectNextSourceInInputMenu = false;
               selectThePreviousInputSource = false;
