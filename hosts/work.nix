@@ -1,7 +1,11 @@
-{ ... }:
+{ lib, ... }:
 {
   system.primaryUser = "jeroen.zeelmaekers";
   users.users."jeroen.zeelmaekers".home = "/Users/jeroen.zeelmaekers";
+  system.activationScripts.postActivation.text = lib.mkAfter ''
+    # Disable idle sleep while connected to power. Battery sleep is unchanged.
+    /usr/bin/pmset -c sleep 0
+  '';
 
   services.aerospace.settings.workspace-to-monitor-force-assignment = {
     misc_2 = 2;
@@ -33,7 +37,6 @@
 
   homebrew.brews = [
     "anomalyco/tap/opencode-v2"
-    "herdr"
   ];
 
   homebrew.masApps = {

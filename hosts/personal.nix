@@ -2,6 +2,7 @@
 {
   system.primaryUser = "jeroen";
   users.users.jeroen.home = "/Users/jeroen";
+  power.sleep.computer = "never";
 
   programs.nix-plist-manager.options.applications.systemSettings = {
     general.softwareUpdate = {

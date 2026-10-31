@@ -3,8 +3,8 @@ let
   dotfilesDirectory = "${config.home.homeDirectory}/github/jeroenzeelmaekers/dotfiles";
 in
 {
-  # OpenCode and Herdr both update files in this directory. Keep it outside
-  # the read-only Nix store and preserve relative imports between plugins.
+  # Keep OpenCode's files outside the read-only Nix store so integrations can
+  # update them and relative plugin imports continue to work.
   xdg.configFile."opencode" = {
     source = config.lib.file.mkOutOfStoreSymlink "${dotfilesDirectory}/config/opencode";
     force = true;

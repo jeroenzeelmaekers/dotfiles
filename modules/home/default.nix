@@ -7,10 +7,10 @@
     ./starship.nix
     ./bat.nix
     ./ghostty.nix
-    ./herdr.nix
     ./lazygit.nix
     ./yazi.nix
     ./neovim.nix
+    ./rex.nix
     ./opencode.nix
     ./macos-settings.nix
   ];

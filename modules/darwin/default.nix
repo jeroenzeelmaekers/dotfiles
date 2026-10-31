@@ -57,7 +57,6 @@
 
     brews = [
       "docker"
-      "herdr"
       "mole"
       "tree-sitter-cli"
     ];
