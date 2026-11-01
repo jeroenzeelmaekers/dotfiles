@@ -56,6 +56,11 @@
         /opt/homebrew/bin
         /usr/local/bin
       )
+
+      rex_cli="/Applications/Rex Beta.app/Contents/Helpers/Rex Server.rex/Contents/MacOS"
+      if [[ -x "$rex_cli/rex" ]]; then
+        path=("$rex_cli" $path)
+      fi
     '';
 
   };

@@ -8,6 +8,7 @@
     difftastic
     eza
     fzf
+    jq
     lazydocker
     lazygit
     nodejs
@@ -17,6 +18,7 @@
     rustc
     starship
     yazi
+    worktrunk
     zoxide
   ];
 }
