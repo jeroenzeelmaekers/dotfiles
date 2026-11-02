@@ -2,6 +2,7 @@ local opt = vim.opt
 
 opt.number = true
 opt.relativenumber = true
+opt.cmdheight = 0
 
 opt.backspace = "indent,eol,start"
 
