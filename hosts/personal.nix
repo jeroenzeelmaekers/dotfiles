@@ -1,5 +1,7 @@
 { ... }:
 {
+  imports = [ ../modules/darwin/aerospace-personal.nix ];
+
   system.primaryUser = "jeroen";
   users.users.jeroen.home = "/Users/jeroen";
   power.sleep.computer = "never";
@@ -26,11 +28,6 @@
       shareMacAnalytics = false;
       shareWithAppDevelopers = false;
     };
-  };
-
-  services.aerospace.settings.workspace-to-monitor-force-assignment = {
-    misc_2 = 2;
-    misc_3 = 2;
   };
 
   homebrew.casks = [
