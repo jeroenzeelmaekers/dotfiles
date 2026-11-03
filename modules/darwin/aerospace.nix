@@ -16,12 +16,12 @@
       ];
 
       gaps = {
-        inner.horizontal = 12;
-        inner.vertical = 12;
-        outer.left = 12;
-        outer.bottom = 10;
-        outer.top = 4;
-        outer.right = 12;
+        inner.horizontal = 10;
+        inner.vertical = 10;
+        outer.left = 14;
+        outer.bottom = 16;
+        outer.top = 6;
+        outer.right = 14;
       };
 
       mode.main.binding = {
@@ -77,7 +77,7 @@
           run = [ "move-node-to-workspace web" "focus-back-and-forth" ];
         }
         {
-          "if".app-name-regex-substring = "ghostty";
+          "if".app-name-regex-substring = "rex beta";
           run = [ "move-node-to-workspace term" "focus-back-and-forth" ];
         }
         {
