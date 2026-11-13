@@ -7,6 +7,22 @@ description: Cut AI tells from any writing. Must always apply.
 
 Edit text to remove AI patterns.
 
+## Technical clarity
+
+Use these rules when the text gives instructions, describes tools, reports errors, or will be read by another agent or system. Use them as guidance for other technical prose. Do not flatten creative writing when voice or nuance matters.
+
+- Put one instruction in each sentence. Use a numbered list for a sequence of steps.
+- Prefer active voice. Name the actor unless the actor is unknown or does not matter.
+- Aim for no more than 20 words in an instruction and 25 words in a description. Split long sentences when this keeps the meaning clear. Do not remove needed detail to meet the limit.
+- Use one term for one thing throughout the text. Keep necessary technical terms, and define terms that readers may not know.
+- Prefer direct verbs over phrasal verbs and noun forms of actions. For example, write "analyze the log" instead of "perform an analysis of the log."
+- Keep articles, subjects, and verbs explicit. Avoid fragments and omitted words that make the reader infer meaning.
+- Preserve every fact, condition, exception, and level of certainty. Do not turn a possibility into a fact or add information that the source does not contain.
+- Keep code, identifiers, commands, paths, quotations, and exact UI labels unchanged unless asked to edit them.
+- Keep each paragraph to one topic. Avoid semicolons.
+
+These rules are inspired by ASD-STE100. They do not establish full STE compliance. This skill does not include the official STE dictionary, so do not claim that a word is ASD-approved.
+
 ## Process
 
 1. Scan for the patterns below.

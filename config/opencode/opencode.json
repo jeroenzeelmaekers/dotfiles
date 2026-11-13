@@ -3,6 +3,7 @@
   "lsp": true,
   "formatter": true,
   "default_agent": "plan",
+  "skills": ["/Users/jeroen/github/jeroenzeelmaekers/simls/.opencode/skills"],
   "agent": {
     "plan": {
       "model": "github-copilot/gpt-6.1-sol",
@@ -12,6 +13,14 @@
     "build": {
       "model": "github-copilot/gpt-6-luna",
       "color": "#BC5C00"
+    }
+  },
+  "mcp": {
+    "servers": {
+      "superlogical": {
+        "type": "remote",
+        "url": "https://www.superlogical.com/rex/community-mcp"
+      }
     }
   }
 }
