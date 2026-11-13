@@ -3,8 +3,12 @@
 /* Link hint markers */
 div.internal-vimium-hint-marker {
   background: #ece1d7 !important;
-  border: 1px solid #867462 !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.1s;
 }
 
 div.internal-vimium-hint-marker span {
@@ -15,12 +19,26 @@ div.internal-vimium-hint-marker span {
   text-shadow: none !important;
 }
 
-div.internal-vimium-hint-marker>.matchingCharacter {
+div.internal-vimium-hint-marker > .matchingCharacter {
   color: #78997a !important;
 }
 
-div>.vimiumActiveHintMarker span {
+div > .vimiumActiveHintMarker span {
   color: #bd8183 !important;
+}
+
+/* HUD */
+.vimiumHUD {
+  background: #ece1d7 !important;
+  border-bottom: none !important;
+  color: #292522 !important;
+  text-shadow: none !important;
+}
+
+.vimiumHUD * {
+  font-family: "Berkeley Mono", monospace !important;
+  font-size: 13px !important;
+  color: #292522 !important;
 }
 
 /* Vomnibar */
@@ -32,7 +50,6 @@ div>.vimiumActiveHintMarker span {
 
 #vomnibar-search-area {
   background: #ece1d7 !important;
-  border-bottom: 1px solid #c1a78e !important;
 }
 
 #vomnibar input {
@@ -55,7 +72,6 @@ div>.vimiumActiveHintMarker span {
 
 #vomnibar li {
   background: #ece1d7 !important;
-  border-bottom: 1px solid #c1a78e !important;
   color: #292522 !important;
 }
 
@@ -84,4 +100,14 @@ div>.vimiumActiveHintMarker span {
 #vomnibar li em .match,
 #vomnibar li .title .match {
   color: #e49b5d !important;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
