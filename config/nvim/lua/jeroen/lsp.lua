@@ -13,9 +13,17 @@ vim.diagnostic.config({
   },
 })
 
+vim.api.nvim_create_user_command("InlayHintsToggle", function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local enabled = vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr })
+  vim.lsp.inlay_hint.enable(not enabled, { bufnr = bufnr })
+end, { desc = "Toggle LSP inlay hints for the current buffer" })
+
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
   callback = function(ev)
+    vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
+
     local function map(mode, lhs, rhs, desc)
       vim.keymap.set(mode, lhs, rhs, { buffer = ev.buf, silent = true, desc = desc })
     end
