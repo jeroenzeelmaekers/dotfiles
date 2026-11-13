@@ -7,14 +7,12 @@
       start-at-login = false;
       "default-root-container-layout" = "tiles";
 
-      gaps = {
-        inner.horizontal = 10;
-        inner.vertical = 10;
-        outer.left = 14;
-        outer.bottom = 16;
-        outer.top = 6;
-        outer.right = 14;
-      };
+      "on-window-detected" = [
+        {
+          "if".app-id = "com.apple.dt.Devices";
+          run = "layout tiling";
+        }
+      ];
 
       mode.main.binding = {
         "alt-h" = "focus left";

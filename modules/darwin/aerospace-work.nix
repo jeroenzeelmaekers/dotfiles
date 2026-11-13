@@ -2,16 +2,25 @@
 {
   services.aerospace.settings = {
     "after-startup-command" = [
-      "workspace misc_2"
+      "workspace misc_1"
       "layout v_tiles"
-      "workspace misc_3"
+      "workspace misc_2"
       "layout v_tiles"
       "workspace web"
     ];
 
     "workspace-to-monitor-force-assignment" = {
+      misc_1 = 2;
       misc_2 = 2;
-      misc_3 = 2;
+    };
+
+    "gaps" = {
+      inner.horizontal = 12;
+      inner.vertical = 12;
+      outer.left = 12;
+      outer.bottom = 10;
+      outer.top = 4;
+      outer.right = 12;
     };
 
     mode.main.binding = {
@@ -21,7 +30,7 @@
       "alt-4" = "workspace teams";
       "alt-5" = "workspace mail";
       "alt-6" = "workspace music";
-      "alt-7" = "workspace misc_1";
+      "alt-7" = "workspace space_0";
       "alt-8" = "workspace misc_2";
       "alt-9" = "workspace misc_3";
       "alt-shift-1" = [ "move-node-to-workspace web" "workspace web" ];
@@ -30,9 +39,9 @@
       "alt-shift-4" = [ "move-node-to-workspace teams" "workspace teams" ];
       "alt-shift-5" = [ "move-node-to-workspace mail" "workspace mail" ];
       "alt-shift-6" = [ "move-node-to-workspace music" "workspace music" ];
-      "alt-shift-7" = [ "move-node-to-workspace misc_1" "workspace misc_1" ];
-      "alt-shift-8" = [ "move-node-to-workspace misc_2" "workspace misc_2" ];
-      "alt-shift-9" = [ "move-node-to-workspace misc_3" "workspace misc_3" ];
+      "alt-shift-7" = [ "move-node-to-workspace space_0" "workspace space_0" ];
+      "alt-shift-8" = [ "move-node-to-workspace misc_1" "workspace misc_1" ];
+      "alt-shift-9" = [ "move-node-to-workspace misc_2" "workspace misc_2" ];
     };
 
     "on-window-detected" = [
@@ -53,10 +62,6 @@
         run = [ "move-node-to-workspace web" "focus-back-and-forth" ];
       }
       {
-        "if".app-id = "net.imput.helium";
-        run = [ "move-node-to-workspace web" "focus-back-and-forth" ];
-      }
-      {
         "if".app-name-regex-substring = "rex beta";
         run = [ "move-node-to-workspace term" "focus-back-and-forth" ];
       }
@@ -67,10 +72,6 @@
       {
         "if".app-name-regex-substring = "mail";
         run = [ "move-node-to-workspace mail" "focus-back-and-forth" ];
-      }
-      {
-        "if".app-name-regex-substring = "parallels";
-        run = "layout tiling";
       }
     ];
   };
