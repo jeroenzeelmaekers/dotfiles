@@ -21,7 +21,7 @@
     "rapidapi"
     "tableplus"
     "spotify"
-    "abue-ammar/tinycast/tinycast"
+    "tinycast"
     "netnewswire"
     "openlogi"
   ];

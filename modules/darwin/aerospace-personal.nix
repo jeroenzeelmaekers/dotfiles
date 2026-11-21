@@ -18,7 +18,7 @@
       inner.horizontal = 10;
       inner.vertical = 10;
       outer.left = 14;
-      outer.bottom = 16;
+      outer.bottom = 14;
       outer.top = 6;
       outer.right = 14;
     };

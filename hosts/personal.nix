@@ -49,9 +49,10 @@
     "tableplus"
     "tailscale-app"
     "android-studio"
-    "abue-ammar/tinycast/tinycast"
+    "tinycast"
     "netnewswire"
     "openlogi"
+    "claude-code"
   ];
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }

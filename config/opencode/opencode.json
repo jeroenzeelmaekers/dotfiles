@@ -6,7 +6,7 @@
   "skills": ["/Users/jeroen/github/jeroenzeelmaekers/simls/.opencode/skills"],
   "agent": {
     "plan": {
-      "model": "github-copilot/gpt-6.1-sol",
+      "model": "github-copilot/gpt-6.2-sol",
       "color": "#6F9B72",
       "variant": "low"
     },
