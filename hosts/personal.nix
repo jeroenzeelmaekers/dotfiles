@@ -53,6 +53,7 @@
     "netnewswire"
     "openlogi"
     "claude-code"
+    "anomalyco/tap/spaceman"
   ];
   homebrew.taps = [
     { name = "qmk/qmk"; trusted = true; }

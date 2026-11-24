@@ -24,6 +24,8 @@
     "tinycast"
     "netnewswire"
     "openlogi"
+    "claude-code"
+    "anomalyco/tap/spaceman"
   ];
 
   homebrew.taps = [
