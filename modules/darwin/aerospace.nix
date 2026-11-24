@@ -1,7 +1,7 @@
 { ... }:
 {
   services.aerospace = {
-    enable = true;
+    enable = false;
     settings = {
       "config-version" = 2;
       start-at-login = false;
