@@ -60,6 +60,8 @@
         homeDirectory = "/Users/jeroen.zeelmaekers";
         stateVersion = "26.05";
       };
+
+      programs.starship.settings.hostname.format = "[macbook-pro]($style) in ";
     };
   };
 }

@@ -99,6 +99,8 @@
         homeDirectory = "/Users/jeroen";
         stateVersion = "26.05";
       };
+
+      programs.starship.settings.hostname.format = "[mac-mini]($style) in ";
     };
   };
 }

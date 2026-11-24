@@ -4,6 +4,7 @@
     enable = true;
     settings = {
       add_newline = false;
+      hostname.ssh_only = false;
       directory = {
         truncation_length = 3;
         truncate_to_repo = false;
