@@ -1,8 +1,17 @@
 return {
-  "savq/melange-nvim",
+  "catppuccin/nvim",
+  name = "catppuccin",
   lazy = false,
   priority = 1000,
   config = function()
+    require("catppuccin").setup({
+      flavour = "auto",
+      background = {
+        light = "latte",
+        dark = "mocha",
+      },
+    })
+
     local function sync_float_hl()
       local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
       local nontext = vim.api.nvim_get_hl(0, { name = "NonText", link = false })
@@ -31,6 +40,6 @@ return {
       callback = sync_float_hl,
     })
 
-    vim.cmd("colorscheme melange")
+    vim.cmd.colorscheme("catppuccin-nvim")
   end,
 }

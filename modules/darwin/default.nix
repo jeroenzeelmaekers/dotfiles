@@ -1,7 +1,5 @@
 { lib, pkgs, ... }:
 {
-  imports = [ ./aerospace.nix ];
-
   nix.package = pkgs.nixVersions.stable;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.gc = {

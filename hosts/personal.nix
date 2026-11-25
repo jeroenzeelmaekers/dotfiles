@@ -1,6 +1,5 @@
 { ... }:
 {
-  imports = [ ../modules/darwin/aerospace-personal.nix ];
 
   system.primaryUser = "jeroen";
   users.users.jeroen.home = "/Users/jeroen";
@@ -68,6 +67,7 @@
     "qmk/qmk/qmk"
     "xcodes"
     "anomalyco/tap/opencode-v2"
+    "fastfetch"
   ];
 
   homebrew.masApps = {

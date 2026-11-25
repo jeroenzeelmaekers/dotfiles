@@ -1,7 +1,5 @@
 { lib, ... }:
 {
-  imports = [ ../modules/darwin/aerospace-work.nix ];
-
   system.primaryUser = "jeroen.zeelmaekers";
   users.users."jeroen.zeelmaekers".home = "/Users/jeroen.zeelmaekers";
   system.activationScripts.postActivation.text = lib.mkAfter ''

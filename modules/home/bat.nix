@@ -3,19 +3,19 @@
   programs.bat = {
     enable = true;
     config = {
-      theme-dark = "Melange Dark";
-      theme-light = "Melange Light";
+      theme-dark = "Catppuccin Mocha";
+      theme-light = "Catppuccin Latte";
       style = "numbers,changes,header";
       italic-text = "always";
     };
     themes = {
-      "Melange Dark" = {
+      "Catppuccin Mocha" = {
         src = ../../assets/bat/themes;
-        file = "Melange Dark.tmTheme";
+        file = "Catppuccin Mocha.tmTheme";
       };
-      "Melange Light" = {
+      "Catppuccin Latte" = {
         src = ../../assets/bat/themes;
-        file = "Melange Light.tmTheme";
+        file = "Catppuccin Latte.tmTheme";
       };
     };
   };
