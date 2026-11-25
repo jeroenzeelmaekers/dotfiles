@@ -12,7 +12,7 @@ return {
       },
     })
 
-    local function sync_float_hl()
+    local function sync_transparent_hl()
       local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
       local nontext = vim.api.nvim_get_hl(0, { name = "NonText", link = false })
       local fg = normal.fg and string.format("#%06x", normal.fg) or "NONE"
@@ -26,6 +26,8 @@ return {
         "FoldColumn",
         "LineNr",
         "CursorLineNr",
+        "StatusLine",
+        "StatusLineNC",
       }) do
         local hl = vim.api.nvim_get_hl(0, { name = group, link = false })
         hl.bg = "NONE"
@@ -37,7 +39,7 @@ return {
     end
 
     vim.api.nvim_create_autocmd("ColorScheme", {
-      callback = sync_float_hl,
+      callback = sync_transparent_hl,
     })
 
     vim.cmd.colorscheme("catppuccin-nvim")

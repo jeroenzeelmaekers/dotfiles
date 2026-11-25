@@ -5,6 +5,28 @@ return {
     local lazy_status = require("lazy.status")
     local lualine = require("lualine")
 
+    local function lualine_theme()
+      local theme = require("catppuccin.utils.lualine")()
+
+      for _, sections in pairs(theme) do
+        local mode_colors = sections.a
+        if mode_colors and mode_colors.bg ~= "NONE" then
+          mode_colors.fg = mode_colors.bg
+        end
+
+        for _, colors in pairs(sections) do
+          colors.bg = "NONE"
+        end
+
+        local text_colors = sections.c or sections.b or sections.a or {}
+        sections.x = vim.tbl_deep_extend("force", vim.deepcopy(text_colors), { bg = "NONE" })
+        sections.y = vim.tbl_deep_extend("force", vim.deepcopy(text_colors), { bg = "NONE" })
+        sections.z = vim.tbl_deep_extend("force", vim.deepcopy(text_colors), { bg = "NONE" })
+      end
+
+      return theme
+    end
+
     local function pill(component, color)
       local item = vim.deepcopy(component)
 
@@ -19,7 +41,7 @@ return {
 
     lualine.setup({
       options = {
-        theme = "catppuccin-nvim",
+        theme = lualine_theme,
         section_separators = { left = "", right = "" },
         component_separators = { left = "", right = "" },
         always_divide_middle = false,
