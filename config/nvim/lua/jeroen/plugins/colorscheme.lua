@@ -1,15 +1,12 @@
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
+  "rose-pine/neovim",
+  name = "rose-pine",
   lazy = false,
   priority = 1000,
   config = function()
-    require("catppuccin").setup({
-      flavour = "auto",
-      background = {
-        light = "latte",
-        dark = "mocha",
-      },
+    require("rose-pine").setup({
+      variant = "auto",
+      dark_variant = "main",
     })
 
     local function sync_transparent_hl()
@@ -42,6 +39,6 @@ return {
       callback = sync_transparent_hl,
     })
 
-    vim.cmd.colorscheme("catppuccin-nvim")
+    vim.cmd.colorscheme("rose-pine")
   end,
 }

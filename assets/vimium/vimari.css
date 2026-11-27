@@ -1,10 +1,10 @@
-/* Vimari CSS - Catppuccin Latte theme */
+/* Vimari CSS - Rosé Pine Dawn theme */
 /* Safari user stylesheet to override Vimari defaults */
 
 /* Link hint markers */
 div.internalVimiumHintMarker.vimiumReset {
-  background: #eff1f5 !important;
-  border: 1px solid #8c8fa1 !important;
+  background: #faf4ed !important;
+  border: 1px solid #9893a5 !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -14,7 +14,7 @@ div.internalVimiumHintMarker.vimiumReset {
 }
 
 div.internalVimiumHintMarker.vimiumReset span {
-  color: #4c4f69 !important;
+  color: #575279 !important;
   font-family: "Berkeley Mono", monospace !important;
   font-weight: 600 !important;
   font-size: 13px !important;
@@ -22,22 +22,22 @@ div.internalVimiumHintMarker.vimiumReset span {
 }
 
 div.internalVimiumHintMarker.vimiumReset>.matchingCharacter {
-  color: #40a02b !important;
+  color: #286983 !important;
 }
 
 /* HUD */
 .vimiumHUD.vimiumReset {
-  background: #eff1f5 !important;
-  border: 1px solid #8c8fa1 !important;
+  background: #faf4ed !important;
+  border: 1px solid #9893a5 !important;
   border-bottom: none !important;
-  color: #4c4f69 !important;
+  color: #575279 !important;
   text-shadow: none !important;
 }
 
 .vimiumHUD.vimiumReset * {
   font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
-  color: #4c4f69 !important;
+  color: #575279 !important;
 }
 
 @keyframes fadeInOpacity {

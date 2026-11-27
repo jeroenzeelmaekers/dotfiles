@@ -4,7 +4,7 @@
     enable = true;
     package = null;
     settings = {
-      theme = "dark:Catppuccin Mocha, light:Catppuccin Latte";
+      theme = "dark:Rose Pine, light:Rose Pine Dawn";
       font-family = "Berkeley Mono";
       font-style = "SemiBold";
       font-style-italic = "SemiBold Italic";

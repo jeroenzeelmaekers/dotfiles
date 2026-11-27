@@ -6,7 +6,11 @@ return {
     local lualine = require("lualine")
 
     local function lualine_theme()
-      local theme = require("catppuccin.utils.lualine")()
+      -- The theme module reads the palette at require time, so reload both
+      -- to follow light/dark background changes.
+      package.loaded["rose-pine.palette"] = nil
+      package.loaded["lualine.themes.rose-pine"] = nil
+      local theme = vim.deepcopy(require("lualine.themes.rose-pine"))
 
       for _, sections in pairs(theme) do
         local mode_colors = sections.a

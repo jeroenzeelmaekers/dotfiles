@@ -3,19 +3,19 @@
   programs.bat = {
     enable = true;
     config = {
-      theme-dark = "Catppuccin Mocha";
-      theme-light = "Catppuccin Latte";
+      theme-dark = "Rose Pine";
+      theme-light = "Rose Pine Dawn";
       style = "numbers,changes,header";
       italic-text = "always";
     };
     themes = {
-      "Catppuccin Mocha" = {
+      "Rose Pine" = {
         src = ../../assets/bat/themes;
-        file = "Catppuccin Mocha.tmTheme";
+        file = "Rose Pine.tmTheme";
       };
-      "Catppuccin Latte" = {
+      "Rose Pine Dawn" = {
         src = ../../assets/bat/themes;
-        file = "Catppuccin Latte.tmTheme";
+        file = "Rose Pine Dawn.tmTheme";
       };
     };
   };

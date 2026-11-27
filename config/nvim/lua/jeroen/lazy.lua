@@ -18,7 +18,7 @@ require("lazy").setup({
   { import = "jeroen.plugins.lsp" },
 }, {
   install = {
-    colorscheme = { "catppuccin-nvim" },
+    colorscheme = { "rose-pine" },
   },
   checker = {
     enabled = true,

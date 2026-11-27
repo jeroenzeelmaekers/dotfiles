@@ -11,12 +11,12 @@
       }
     ];
     theme.flavor = {
-      dark = "catppuccin-mocha";
-      light = "catppuccin-latte";
+      dark = "rose-pine";
+      light = "rose-pine-dawn";
     };
     flavors = {
-      catppuccin-mocha = ../../assets/yazi/flavors/catppuccin-mocha.yazi;
-      catppuccin-latte = ../../assets/yazi/flavors/catppuccin-latte.yazi;
+      rose-pine = ../../assets/yazi/flavors/rose-pine.yazi;
+      rose-pine-dawn = ../../assets/yazi/flavors/rose-pine-dawn.yazi;
     };
   };
 }
