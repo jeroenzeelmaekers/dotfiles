@@ -22,8 +22,6 @@ end, { desc = "Toggle LSP inlay hints for the current buffer" })
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
   callback = function(ev)
-    vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
-
     local function map(mode, lhs, rhs, desc)
       vim.keymap.set(mode, lhs, rhs, { buffer = ev.buf, silent = true, desc = desc })
     end
