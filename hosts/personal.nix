@@ -31,17 +31,12 @@
 
   homebrew.casks = [
     "1password"
-    "bartender"
     "cleanshot"
-    "codexbar"
     "discord"
     "figma"
-    "ghostty"
     "helium-browser"
-    "istat-menus"
     "pixelsnap"
     "protonvpn"
-    "qmk-toolbox"
     "rapidapi"
     "skim"
     "spotify"
@@ -55,16 +50,11 @@
     "anomalyco/tap/spaceman"
   ];
   homebrew.taps = [
-    { name = "qmk/qmk"; trusted = true; }
-    { name = "osx-cross/arm"; trusted = true; }
-    { name = "osx-cross/avr"; trusted = true; }
-    { name = "steipete/tap"; trusted = true; }
     { name = "anomalyco/tap"; trusted = true; }
     { name = "abue-ammar/tinycast"; trusted = true; }
   ];
 
   homebrew.brews = [
-    "qmk/qmk/qmk"
     "xcodes"
     "anomalyco/tap/opencode-v2"
     "fastfetch"

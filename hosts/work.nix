@@ -9,12 +9,8 @@
 
   homebrew.casks = [
     "1password"
-    "bartender"
     "cleanshot"
-    "codexbar"
     "figma"
-    "ghostty"
-    "istat-menus"
     "pixelsnap"
     "rapidapi"
     "tableplus"
@@ -27,7 +23,6 @@
   ];
 
   homebrew.taps = [
-    { name = "steipete/tap"; trusted = true; }
     { name = "anomalyco/tap"; trusted = true; }
     { name = "abue-ammar/tinycast"; trusted = true; }
   ];

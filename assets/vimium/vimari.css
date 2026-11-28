@@ -1,10 +1,32 @@
-/* Vimari CSS - Rosé Pine Dawn theme */
+/* Vimari CSS - Rosé Pine theme */
 /* Safari user stylesheet to override Vimari defaults */
+
+:root {
+  --vimari-rose-base: #faf4ed;
+  --vimari-rose-border: #9893a5;
+  --vimari-rose-text: #575279;
+  --vimari-rose-pine: #286983;
+  --vimari-hint-background: #f2e9e1;
+  --vimari-hint-text: #575279;
+  --vimari-hint-pine: #286983;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vimari-rose-base: #191724;
+    --vimari-rose-border: #26233a;
+    --vimari-rose-text: #e0def4;
+    --vimari-rose-pine: #31748f;
+    --vimari-hint-background: #26233a;
+    --vimari-hint-text: #e0def4;
+    --vimari-hint-pine: #31748f;
+  }
+}
 
 /* Link hint markers */
 div.internalVimiumHintMarker.vimiumReset {
-  background: #faf4ed !important;
-  border: 1px solid #9893a5 !important;
+  background: var(--vimari-hint-background) !important;
+  border: none !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -14,7 +36,7 @@ div.internalVimiumHintMarker.vimiumReset {
 }
 
 div.internalVimiumHintMarker.vimiumReset span {
-  color: #575279 !important;
+  color: var(--vimari-hint-text) !important;
   font-family: "Berkeley Mono", monospace !important;
   font-weight: 600 !important;
   font-size: 13px !important;
@@ -22,22 +44,22 @@ div.internalVimiumHintMarker.vimiumReset span {
 }
 
 div.internalVimiumHintMarker.vimiumReset>.matchingCharacter {
-  color: #286983 !important;
+  color: var(--vimari-hint-pine) !important;
 }
 
 /* HUD */
 .vimiumHUD.vimiumReset {
-  background: #faf4ed !important;
-  border: 1px solid #9893a5 !important;
+  background: var(--vimari-rose-base) !important;
+  border: 1px solid var(--vimari-rose-border) !important;
   border-bottom: none !important;
-  color: #575279 !important;
+  color: var(--vimari-rose-text) !important;
   text-shadow: none !important;
 }
 
 .vimiumHUD.vimiumReset * {
   font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
-  color: #575279 !important;
+  color: var(--vimari-rose-text) !important;
 }
 
 @keyframes fadeInOpacity {

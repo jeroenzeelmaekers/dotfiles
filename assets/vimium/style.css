@@ -1,8 +1,43 @@
-/* Vimium CSS - Rosé Pine Dawn theme */
+/* Vimium CSS - Rosé Pine theme */
+
+:root {
+  --vimium-rose-base: #faf4ed;
+  --vimium-rose-surface: #f2e9e1;
+  --vimium-rose-border: #9893a5;
+  --vimium-rose-text: #575279;
+  --vimium-rose-muted: #9893a5;
+  --vimium-rose-pine: #286983;
+  --vimium-rose-foam: #56949f;
+  --vimium-rose-gold: #ea9d34;
+  --vimium-rose-love: #b4637a;
+  --vimium-hint-background: #f2e9e1;
+  --vimium-hint-text: #575279;
+  --vimium-hint-pine: #286983;
+  --vimium-hint-love: #b4637a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vimium-rose-base: #191724;
+    --vimium-rose-surface: #1f1d2e;
+    --vimium-rose-border: #26233a;
+    --vimium-rose-text: #e0def4;
+    --vimium-rose-muted: #908caa;
+    --vimium-rose-pine: #31748f;
+    --vimium-rose-foam: #9ccfd8;
+    --vimium-rose-gold: #f6c177;
+    --vimium-rose-love: #eb6f92;
+    --vimium-hint-background: #26233a;
+    --vimium-hint-text: #e0def4;
+    --vimium-hint-pine: #31748f;
+    --vimium-hint-love: #eb6f92;
+  }
+}
 
 /* Link hint markers */
 div.internal-vimium-hint-marker {
-  background: #faf4ed !important;
+  background: var(--vimium-hint-background) !important;
+  border: none !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
   opacity: 1;
   animation-name: fadeInOpacity;
@@ -12,7 +47,7 @@ div.internal-vimium-hint-marker {
 }
 
 div.internal-vimium-hint-marker span {
-  color: #575279 !important;
+  color: var(--vimium-hint-text) !important;
   font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
   font-weight: 600 !important;
@@ -20,41 +55,41 @@ div.internal-vimium-hint-marker span {
 }
 
 div.internal-vimium-hint-marker > .matchingCharacter {
-  color: #286983 !important;
+  color: var(--vimium-hint-pine) !important;
 }
 
 div > .vimiumActiveHintMarker span {
-  color: #b4637a !important;
+  color: var(--vimium-hint-love) !important;
 }
 
 /* HUD */
 .vimiumHUD {
-  background: #faf4ed !important;
+  background: var(--vimium-rose-base) !important;
   border-bottom: none !important;
-  color: #575279 !important;
+  color: var(--vimium-rose-text) !important;
   text-shadow: none !important;
 }
 
 .vimiumHUD * {
   font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
-  color: #575279 !important;
+  color: var(--vimium-rose-text) !important;
 }
 
 /* Vomnibar */
 #vomnibar {
-  background: #faf4ed !important;
-  border: 1px solid #9893a5 !important;
+  background: var(--vimium-rose-base) !important;
+  border: 1px solid var(--vimium-rose-border) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 #vomnibar-search-area {
-  background: #faf4ed !important;
+  background: var(--vimium-rose-base) !important;
 }
 
 #vomnibar input {
-  background: #f2e9e1 !important;
-  color: #575279 !important;
+  background: var(--vimium-rose-surface) !important;
+  color: var(--vimium-rose-text) !important;
   font-family: "Berkeley Mono", monospace !important;
   font-size: 13px !important;
   border: none !important;
@@ -62,44 +97,44 @@ div > .vimiumActiveHintMarker span {
 }
 
 #vomnibar input::selection {
-  background: #9893a5 !important;
-  color: #faf4ed !important;
+  background: var(--vimium-rose-muted) !important;
+  color: var(--vimium-rose-base) !important;
 }
 
 #vomnibar ul {
-  background: #faf4ed !important;
+  background: var(--vimium-rose-base) !important;
 }
 
 #vomnibar li {
-  background: #faf4ed !important;
-  color: #575279 !important;
+  background: var(--vimium-rose-base) !important;
+  color: var(--vimium-rose-text) !important;
 }
 
 #vomnibar li.selected {
-  background: #f2e9e1 !important;
+  background: var(--vimium-rose-surface) !important;
 }
 
 #vomnibar li .title,
 #vomnibar li em {
-  color: #575279 !important;
+  color: var(--vimium-rose-text) !important;
 }
 
 #vomnibar li .url {
-  color: #56949f !important;
+  color: var(--vimium-rose-foam) !important;
 }
 
 #vomnibar li .source {
-  color: #9893a5 !important;
+  color: var(--vimium-rose-muted) !important;
 }
 
 #vomnibar li .match {
-  color: #ea9d34 !important;
+  color: var(--vimium-rose-gold) !important;
   font-weight: 600 !important;
 }
 
 #vomnibar li em .match,
 #vomnibar li .title .match {
-  color: #ea9d34 !important;
+  color: var(--vimium-rose-gold) !important;
 }
 
 @keyframes fadeInOpacity {

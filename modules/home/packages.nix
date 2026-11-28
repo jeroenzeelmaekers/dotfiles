@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     aria2
     bat
-    btop
+    bottom
     cargo
     colima
     difftastic

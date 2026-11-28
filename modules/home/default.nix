@@ -6,7 +6,6 @@
     ./git.nix
     ./starship.nix
     ./bat.nix
-    ./ghostty.nix
     ./lazygit.nix
     ./yazi.nix
     ./neovim.nix
